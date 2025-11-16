@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<title>Bootstrap demo</title>
+		<link
+			crossorigin="anonymous"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+			rel="stylesheet"
+		/>
+		<link href="style.css" rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+
+	<div class="container-fluid px-0 py-2 sticky-top rounded-bottom-4">
+		<header
+				class="d-flex align-items-center justify-content-between position-relative"
+		>
+			<!-- Header on the left -->
+			<a class="header-title text-dark text-decoration-none">
+						<span class="fs-4">
+							<span class="pala">PALA</span
+							><span class="wonder">WANDER</span>
+						</span>
+			</a>
+
+			<!-- Centered nav -->
+			<nav
+					class="position-absolute top-50 start-50 translate-middle"
+			>
+				<ul class="nav nav-pills">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Our Tours</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Bookings</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">FAQs</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="dropdown">
+				<button
+						aria-expanded="false"
+						class="btn"
+						data-bs-toggle="dropdown"
+						type="button"
+				>
+					<i class="bi bi-text-right fs-3"></i>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a class="dropdown-item" href="#">Action</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#"
+						>Another action</a
+						>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#"
+						>Something else here</a
+						>
+					</li>
+				</ul>
+			</div>
+		</header>
+	</div>
+
+		<section class="first-section d-flex flex-column">
+
+			<div
+				class="carousel slide carousel-fade h-100 rounded-4 overflow-hidden flex-grow-1 mb-3 position-relative"
+				data-bs-ride="carousel"
+				id="carouselExampleIndicators"
+			>
+				<!-- Indicators -->
+				<div class="carousel-indicators">
+					<button
+						aria-current="true"
+						aria-label="Slide 1"
+						class="active"
+						data-bs-slide-to="0"
+						data-bs-target="#carouselExampleIndicators"
+						type="button"
+					></button>
+					<button
+						aria-label="Slide 2"
+						data-bs-slide-to="1"
+						data-bs-target="#carouselExampleIndicators"
+						type="button"
+					></button>
+					<button
+						aria-label="Slide 3"
+						data-bs-slide-to="2"
+						data-bs-target="#carouselExampleIndicators"
+						type="button"
+					></button>
+				</div>
+
+				<!-- Slides wrapper -->
+				<div class="carousel-inner h-100">
+					<div
+						class="carousel-item active h-100"
+						data-bs-interval="5000"
+					>
+						<img
+							alt="..."
+							class="d-block w-100 h-100 object-fit-cover"
+							src="assets/images/crsl_image1.jpg"
+						/>
+						<div class="overlay"></div>
+					</div>
+					<div class="carousel-item h-100" data-bs-interval="5000">
+						<img
+							alt="..."
+							class="d-block w-100 h-100 object-fit-cover"
+							src="assets/images/crsl_image2.jpg"
+						/>
+						<div class="overlay"></div>
+					</div>
+					<div class="carousel-item h-100" data-bs-interval="5000">
+						<img
+							alt="..."
+							class="d-block w-100 h-100 object-fit-cover"
+							src="assets/images/crsl_image3.jpg"
+						/>
+						<div class="overlay"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-fixed-text">
+				<h1 class="crsl-h1">Discover the Hidden Gems of Palawan</h1>
+				<p class="crsl-p">A place where nature and adventure unite</p>
+				<button
+					class="btn btn-outline-dark btn-lg icon-toggle crsl-btn"
+					type="button"
+				>
+					Book Now
+					<i class="bi bi-calendar normal-icon ms-2"></i>
+					<i class="bi bi-calendar-check hover-icon ms-2"></i>
+				</button>
+			</div>
+		</section>
+
+		<div
+			class="d-flex flex-column justify-content-center align-items-center my-5 mx-5"
+			id="our-tours"
+		>
+			<h1 class="tours-h1">Top values for you</h1>
+			<p class="tours-p">
+				Try variety of benefits when using our services
+			</p>
+
+			<div
+				class="d-flex justify-content-between align-items-stretch w-100 mt-4"
+			>
+				<div
+					class="p-2 flex-column d-flex justify-content-center align-items-center flex-fill"
+				>
+					<i class="bi bi-send fs-5 circle-icon"></i>
+					<h5 class="tours-h5">Airport pickup</h5>
+					<p class="tours-h5-p">
+						We provide escort form the airport to the hotel
+					</p>
+				</div>
+				<div
+					class="p-2 flex-column d-flex justify-content-center align-items-center flex-fill"
+				>
+					<i class="bi bi-calendar4-week fs-5 circle-icon"></i>
+					<h5 class="tours-h5">Easy booking</h5>
+					<p class="tours-h5-p">
+						Quick and easy booking of tour for upcoming dates
+					</p>
+				</div>
+				<div
+					class="p-2 flex-column d-flex justify-content-center align-items-center flex-fill"
+				>
+					<i class="bi bi-people fs-5 circle-icon"></i>
+					<h5 class="tours-h5">Best tour guide</h5>
+					<p class="tours-h5-p">
+						Our best tour guide is ready to guide your trip
+					</p>
+				</div>
+				<div
+					class="p-2 flex-column d-flex justify-content-center align-items-center flex-fill"
+				>
+					<i class="bi bi-percent fs-5 circle-icon"></i>
+					<h5 class="tours-h5">Lots of promos</h5>
+					<p class="tours-h5-p">
+						Various promotions and drawings of tours
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="d-flex flex-column justify-content-center align-items-left mx-5 mb-5"
+		>
+			<h1 class="tours-h1">Choose your tour</h1>
+			<div class="row row-cols-2 row-cols-md-4 g-4 py-4">
+				<div class="col">
+					<div class="card h-100 rounded-4 card-price">
+						<img
+							alt="..."
+							class="card-img-top rounded-4 img-price"
+							src="assets/images/tour-card-img-1.jpg"
+						/>
+						<div class="rating-badge">
+							4.7<i class="bi bi-star-fill"></i>
+						</div>
+						<div class="card-body">
+							<p class="rounded-2 card-round">PUERTO PRINCESA</p>
+							<h5 class="card-title">Underground River Toure</h5>
+							<p class="card-text">
+								Paddle through a world-famous underground cave
+								system filled with stunning rock formations and
+								bats.
+							</p>
+							<div class="price-container">
+								<p class="price-text">STARTS AT</p>
+								<p class="price-tag">₱2,000</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-100 rounded-4 card-price">
+						<img
+							alt="..."
+							class="card-img-top rounded-4 img-price"
+							src="assets/images/tour-card-img2.jpg"
+						/>
+						<div class="rating-badge">
+							5.0<i class="bi bi-star-fill"></i>
+						</div>
+						<div class="card-body">
+							<p class="rounded-2 card-round">EL NIDO</p>
+							<h5 class="card-title">Island Hopping Tour</h5>
+							<p class="card-text">
+								Explore lagoons, beaches, and limestone cliffs —
+								including the iconic Big Lagoon and 7 Commandos
+								Beach.
+							</p>
+							<div class="price-container">
+								<p class="price-text">STARTS AT</p>
+								<p class="price-tag">₱1,500</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-100 rounded-4 card-price">
+						<img
+							alt="..."
+							class="card-img-top rounded-4 img-price"
+							src="assets/images/tour-card-img3.jpg"
+						/>
+						<div class="rating-badge">
+							4.8<i class="bi bi-star-fill"></i>
+						</div>
+						<div class="card-body">
+							<p class="rounded-2 card-round">CORON</p>
+							<h5 class="card-title">Ultimate Island Tour</h5>
+							<p class="card-text">
+								Swim in crystal-clear lakes, snorkel WWII
+								shipwrecks, and relax on white-sand beaches.
+							</p>
+							<div class="price-container">
+								<p class="price-text">STARTS AT</p>
+								<p class="price-tag">₱1,800</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-100 rounded-4 card-price">
+						<img
+							alt="..."
+							class="card-img-top rounded-4 img-price"
+							src="assets/images/tour-card-img4.jpg"
+						/>
+						<div class="rating-badge">
+							4.7<i class="bi bi-star-fill"></i>
+						</div>
+						<div class="card-body">
+							<p class="rounded-2 card-round">SAN VICENTE</p>
+							<h5 class="card-title">
+								Port Barton Island Hopping
+							</h5>
+							<p class="card-text">
+								Visit remote islands, vibrant coral reefs, and
+								turtle sanctuaries around peaceful Port Barton
+								Bay.
+							</p>
+							<div class="price-container">
+								<p class="price-text">STARTS AT</p>
+								<p class="price-tag">₱1,200</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card hidden-card h-100 rounded-4 card-price">
+						<img
+							alt="..."
+							class="card-img-top rounded-4 img-price"
+							src="assets/images/tour-card-img5.jpg"
+						/>
+						<div class="rating-badge">
+							4.7<i class="bi bi-star-fill"></i>
+						</div>
+						<div class="card-body">
+							<p class="rounded-2 card-round">BALABAC</p>
+							<h5 class="card-title">
+								Balabac Island Expedition
+							</h5>
+							<p class="card-text">
+								Hop across pristine islands and sandbars with
+								turquoise waters and untouched tropical scenery.
+							</p>
+							<div class="price-container">
+								<p class="price-text">STARTS AT</p>
+								<p class="price-tag">₱2,500</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card hidden-card h-100 rounded-4 card-price">
+						<img
+							alt="..."
+							class="card-img-top rounded-4 img-price"
+							src="assets/images/tour-card-img6.jpg"
+						/>
+						<div class="rating-badge">
+							4.6<i class="bi bi-star-fill"></i>
+						</div>
+						<div class="card-body">
+							<p class="rounded-2 card-round">TAYTAY</p>
+							<h5 class="card-title">
+								Fort Santa Isabel & Island Hopping Tour
+							</h5>
+							<p class="card-text">
+								Discover Taytay’s 17th-century Spanish fort,
+								then sail to nearby islands with hidden beaches
+								and coral reefs.
+							</p>
+							<div class="price-container">
+								<p class="price-text">STARTS AT</p>
+								<p class="price-tag">₱1,500</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button
+				class="btn btn-outline-primary rounded-pill see-all-btn mb-5"
+				type="button"
+			>
+				See All
+			</button>
+		</div>
+
+		<div class="card mx-5 rounded-4 mb-5 travel-img-card">
+			<img
+				src="assets/images/card-big-img1.jpg"
+				class="card-img travel-img"
+				alt="..."
+			/>
+			<div class="card-img-overlay">
+				<h5
+					class="travel-h5"
+					data-text="Enjoy your travel"
+				></h5>
+				<p
+					class="card-text travel-p"
+					data-text="Discover the most unique and vibrant experience the Palawan have to offer"
+				></p>
+			</div>
+		</div>
+
+		<div class="d-flex flex-column justify-content-center align-items-left mx-5 my-5">
+			<div class="row row-cols-2 row-cols-md-2 g-4">
+				<!-- Left Column: Title -->
+				<div class="col ">
+					<h1 class="blogs-h5">Palawan Adventure Blogs</h1>
+					<p class="blogs-p">Discover Palawan, one story at a time.</p>
+				</div>
+
+				<!-- Right Column: Description and Button -->
+				<div class="col">
+					<p class="blogs-p">
+						Explore captivating stories, travel tips, and unforgettable adventures from fellow travelers as they journey through the pristine beaches, lush landscapes, and hidden gems of Palawan, offering you inspiration, guidance, and a glimpse of the vibrant local culture and breathtaking natural beauty this paradise has to offer.
+					</p>
+					<button class="btn btn-outline-primary rounded-pill rd-al-artcls my-4" type="button">
+						Read all articles
+					</button>
+				</div>
+				<div class="col">
+					<div class="card h-100 rounded-4 card-price">
+						<img
+								alt="..."
+								class="card-img-top rounded-4 img-price"
+								src="assets/images/tour-card-img2.jpg"
+						/>
+						<div class="rating-badge">
+							<i class="bi bi-clock"></i>5.0
+						</div>
+						<div class="card-body">
+							<p class="rounded-2 card-round">EL NIDO</p>
+							<h5 class="card-title">Island Hopping Tour</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-100 rounded-4 card-price">
+						<img
+								alt="..."
+								class="card-img-top rounded-4 img-price"
+								src="assets/images/tour-card-img2.jpg"
+						/>
+						<div class="rating-badge">
+							<i class="bi bi-clock"></i>5.0
+						</div>
+						<div class="card-body">
+							<p class="rounded-2 card-round">EL NIDO</p>
+							<h5 class="card-title">Island Hopping Tour</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-100 rounded-4 card-price">
+						<img
+								alt="..."
+								class="card-img-top rounded-4 img-price"
+								src="assets/images/tour-card-img2.jpg"
+						/>
+						<div class="rating-badge">
+							<i class="bi bi-clock"></i>5.0
+						</div>
+						<div class="card-body">
+							<p class="rounded-2 card-round">EL NIDO</p>
+							<h5 class="card-title">Island Hopping Tour</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-100 rounded-4 card-price">
+						<img
+								alt="..."
+								class="card-img-top rounded-4 img-price"
+								src="assets/images/tour-card-img2.jpg"
+						/>
+						<div class="rating-badge">
+							<i class="bi bi-clock"></i>5.0
+						</div>
+						<div class="card-body">
+							<p class="rounded-2 card-round">EL NIDO</p>
+							<h5 class="card-title">Island Hopping Tour</h5>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card mx-5 rounded-4 mb-5 card-end-img">
+			<img
+				src="assets/images/card-end-img1.jpg"
+				class="card-img"
+				alt="..."
+			/>
+			<div class="card-img-overlay card-end-text">
+				<h5 class="card-end-h5">
+					Let's get to know the Palawan
+				</h5>
+				<button
+					class="btn btn-outline-dark btn-lg icon-toggle crsl-btn"
+					type="button"
+				>
+					Book Now
+				</button>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="footer-wrapper rounded-4 my-3">
+			<footer class="py-5">
+				<div class="container-fluid">
+					<div class="row align-items-start mx-4">
+						<!-- Left: © 2025 -->
+						<div class="col-auto mb-3">
+							<a
+								class="header-title text-dark text-decoration-none"
+							>
+								<span class="fs-4">
+									<span class="pala">PALA</span
+									><span class="wonder">WANDER</span>
+								</span>
+							</a>
+							<p>test blablabababa</p>
+						</div>
+
+						<!-- Right: 3 sections aligned to the end with more space -->
+						<div class="col-auto ms-auto mb-3">
+							<div
+								class="d-flex justify-content-between section-mrgn"
+							>
+								<!-- Section 1 -->
+								<div class="me-1 section">
+									<h5>Section 1</h5>
+									<ul class="nav flex-column">
+										<li class="nav-item mb-2">
+											<a
+												href="#"
+												class="nav-link p-0 text-body-secondary"
+												>Home</a
+											>
+										</li>
+										<li class="nav-item mb-2">
+											<a
+												href="#"
+												class="nav-link p-0 text-body-secondary"
+												>Features</a
+											>
+										</li>
+										<li class="nav-item mb-2">
+											<a
+												href="#"
+												class="nav-link p-0 text-body-secondary"
+												>Pricing</a
+											>
+										</li>
+									</ul>
+								</div>
+
+								<!-- Section 2 -->
+								<div class="me-1 section">
+									<h5>Section 2</h5>
+									<ul class="nav flex-column">
+										<li class="nav-item mb-2">
+											<a
+												href="#"
+												class="nav-link p-0 text-body-secondary"
+												>FAQs</a
+											>
+										</li>
+										<li class="nav-item mb-2">
+											<a
+												href="#"
+												class="nav-link p-0 text-body-secondary"
+												>About</a
+											>
+										</li>
+										<li class="nav-item mb-2">
+											<a
+												href="#"
+												class="nav-link p-0 text-body-secondary"
+												>Contact</a
+											>
+										</li>
+									</ul>
+								</div>
+
+								<!-- Section 3 -->
+								<div>
+									<h5>Section 3</h5>
+									<ul class="nav flex-column section">
+										<li class="nav-item mb-2">
+											<a
+												href="#"
+												class="nav-link p-0 text-body-secondary"
+												>Blog</a
+											>
+										</li>
+										<li class="nav-item mb-2">
+											<a
+												href="#"
+												class="nav-link p-0 text-body-secondary"
+												>Careers</a
+											>
+										</li>
+										<li class="nav-item mb-2">
+											<a
+												href="#"
+												class="nav-link p-0 text-body-secondary"
+												>Support</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="border-top-dark my-3"></div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script src="script.js"></script>
+		<script
+			crossorigin="anonymous"
+			integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+		></script>
+	</body>
+</html>

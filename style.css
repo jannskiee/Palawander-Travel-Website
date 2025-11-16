@@ -1,0 +1,493 @@
+:root {
+	--black-color: #1a1e18;
+	--white-color: #ffffff;
+	--gray-color: #f4f4f4;
+}
+
+@keyframes blink {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
+@font-face {
+	font-family: "Cina Geo";
+	src: url("assets/fonts/CinaGEOTest-ExtraLight-BF6401589a08ee8.otf")
+		format("opentype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+/* Regular */
+@font-face {
+	font-family: "Cina Geo";
+	src: url("assets/fonts/CinaGEOTest-Regular-BF640158993b49e.otf")
+		format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Semi-Bold */
+@font-face {
+	font-family: "Cina Geo";
+	src: url("assets/fonts/CinaGEOTest-SemiBold-BF64015899cbc35.otf")
+		format("opentype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+/* Bold */
+@font-face {
+	font-family: "Cina Geo";
+	src: url("assets/fonts/CinaGEOTest-Bold-BF64015899f3908.otf")
+		format("opentype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+body {
+	background-color: var(--white-color);
+	padding: 0 50px !important;
+	margin: 0;
+}
+
+.pala {
+	font-family: "Cina Geo", sans-serif; /* elegant serif font */
+	font-weight: 300;
+}
+
+.wonder {
+	font-family: "Cina Geo", sans-serif; /* modern sans-serif font */
+	font-weight: 700;
+}
+
+.nav-link {
+	color: black !important;
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+	transition: color 0.3s;
+}
+
+.nav-pills .nav-link:hover {
+	color: gray !important;
+	background-color: transparent !important;
+}
+
+.dropdown .btn {
+	padding-right: 0px;
+}
+
+.first-section {
+	height: 90vh; /* entire viewport */
+}
+
+.carousel-inner img {
+	object-fit: cover; /* makes the image fill carousel without stretching */
+}
+
+.carousel-fixed-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	z-index: 3;
+}
+
+.crsl-h1 {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 700;
+	font-size: 100px;
+}
+
+.crsl-p {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 300;
+	font-size: 17px;
+}
+
+.crsl-btn {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	margin-top: 20px;
+	width: 140px;
+	background-color: white;
+	color: black;
+	border: 1px solid transparent;
+	transition: all 0.3s ease;
+	z-index: 3;
+}
+
+.crsl-btn:hover {
+	background-color: rgba(255, 255, 255, 0.15);
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+	transform: scale(1.05);
+}
+
+.carousel-item .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4); /* adjust opacity to your liking */
+	z-index: 1;
+}
+
+.carousel-fade .carousel-item {
+	transition: opacity 0.6s ease;
+}
+
+.icon-wrapper {
+	position: relative;
+	display: inline-block;
+	width: 1.25em;
+	text-align: center;
+}
+
+.icon-wrapper .hover-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.icon-toggle .hover-icon {
+	display: none;
+}
+
+.icon-toggle:hover .normal-icon {
+	display: none;
+}
+
+.icon-toggle:hover .hover-icon {
+	display: inline-block;
+}
+
+.dropdown .bi:hover {
+	color: gray !important;
+	background-color: transparent !important;
+}
+
+.tours-h1 {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+	font-size: 50px;
+	margin-bottom: 15px;
+}
+
+.tours-p {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.d-flex .flex-fill h5 {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+}
+
+.tours-h5 {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.tours-h5-p {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	width: 200px;
+	text-align: center;
+}
+
+.circle-icon {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 45px; /* circle size */
+	height: 45px; /* circle size */
+	border-radius: 50%; /* makes it a circle */
+	background-color: var(--gray-color); /* light gray */
+	color: #000; /* icon color */
+	font-size: 1.25rem; /* adjust icon size */
+	line-height: 0; /* remove extra spacing */
+	margin-bottom: 10px;
+}
+
+.see-all-btn {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	text-align: center;
+	width: 10%;
+	display: block;
+	margin: 0 auto;
+	color: black;
+	border-color: black;
+}
+
+.see-all-btn:hover {
+	background-color: black !important;
+	color: white !important;
+}
+
+.hidden-card {
+	display: none;
+}
+
+.card-img-top {
+	display: block;
+	width: 100%; /* always fill the card’s width */
+	height: 250px; /* fixed height for all images */
+	object-fit: cover; /* crop edges to fill frame evenly */
+	object-position: center; /* center the cropped area */
+	border-top-left-radius: 0.5rem; /* optional rounding */
+	border-top-right-radius: 0.5rem;
+}
+
+.card-round {
+	display: inline-block;
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	letter-spacing: 1px;
+	background-color: var(--gray-color);
+	color: #6c757d;
+	padding: 2px 6px;
+	margin-bottom: 5px;
+}
+
+.rating-badge {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 4px 12px;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+
+	/* 🎨 Glassy gray background */
+	background: rgba(120, 120, 120, 0.25); /* light gray with transparency */
+	backdrop-filter: blur(10px) saturate(180%);
+	-webkit-backdrop-filter: blur(10px) saturate(180%);
+
+	color: #fff;
+	font-weight: 600;
+	font-size: 14px;
+	border-radius: 9999px; /* full pill */
+	border: 1px solid rgba(255, 255, 255, 0.2); /* subtle glass border */
+}
+
+.card {
+	position: relative;
+	min-height: 460px; /* keeps cards equal height */
+	border-radius: 0.5rem;
+	overflow: hidden;
+	transition: all 0.4s ease; /* smooth transitions */
+}
+
+.card-body {
+	padding-bottom: 60px; /* adds space so price doesn’t overlap text */
+}
+.card-price:hover {
+	transform: translateY(-8px); /* lift up slightly */
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* soft shadow glow */
+}
+
+/* Image brightness on hover */
+.img-price:hover {
+	filter: brightness(1.1);
+	transform: scale(1.05); /* slight zoom */
+	transition: all 0.5s ease;
+}
+
+/* Reset smooth transitions when not hovered */
+.img-price {
+	transition: all 0.5s ease;
+}
+
+.price-container {
+	position: absolute;
+	bottom: 15px;
+	left: 20px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.price-text {
+	margin: 0;
+	font-size: 0.9rem;
+	color: #6c757d;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.price-tag {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #000;
+}
+
+.card-img {
+	height: 70vh; /* 70% of viewport height */
+	object-fit: cover;
+}
+
+.section-mrgn {
+	min-width: 600px;
+}
+
+.footer-wrapper {
+	background-color: #efefef;
+}
+
+.border-top-dark {
+	border-top: 1px solid #d3d3d3; /* dark gray */
+}
+
+.section {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.travel-img-card {
+	border: none;
+	position: relative;
+	overflow: hidden;
+}
+
+.travel-img-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.travel-h5 {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+	font-size: 70px;
+	margin-top: 30px;
+	margin-left: 50px;
+	position: relative;
+	z-index: 3;
+	color: white;
+}
+
+.travel-p {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	margin-top: 20px;
+	margin-left: 55px;
+	position: relative;
+	z-index: 3;
+	color: white;
+}
+
+.travel-h5::after,
+.travel-p::after {
+	content: none;
+}
+
+.card-end-img {
+	border: none;
+	height: 30vh; /* 70% of viewport height */
+	object-fit: cover;
+}
+
+.card-end-img::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.card-end-text {
+	display: flex; /* enable flexbox */
+	flex-direction: column; /* stack h5 and p vertically */
+	justify-content: center; /* vertical centering */
+	align-items: center; /* horizontal centering */
+	text-align: center; /* center text */
+	padding: 0; /* remove default padding */
+}
+
+.card-end-h5 {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+	font-size: 70px;
+	width: 40%;
+	color: var(--white-color);
+	z-index: 3;
+}
+
+.rd-al-artcls {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	text-align: center; /* optional, keeps text inside button centered */
+	width: 20%; /* keeps button small */
+	display: block;
+	margin: 0; /* remove auto centering */
+	color: black;
+	border-color: black;
+}
+
+.rd-al-artcls:hover {
+	background-color: black !important;
+	color: white !important;
+}
+
+.blogs-h5 {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+	font-size: 50px;
+	margin-bottom: 15px;
+}
+
+.blogs-p {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.card-title {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 400;
+	font-size: 22px;
+}
+
+.card-text {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.sticky-top {
+	background-color: var(--white-color);
+}

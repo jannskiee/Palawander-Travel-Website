@@ -510,3 +510,16 @@ body {
     font-weight: 300;
     font-size: 16px;
 }
+
+.card-btn {
+    position: absolute;
+    bottom: 20px; /* distance from bottom */
+    right: 20px;  /* distance from right */
+    width: 50px;
+    height: 50px;
+}
+
+.card-btn:hover {
+    background-color: black !important;
+    color: white !important;
+}

@@ -491,3 +491,22 @@ body {
 .sticky-top {
 	background-color: var(--white-color);
 }
+
+.footer-p {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    width: 70%;
+}
+
+.footer-h5 {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.footer-li {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}

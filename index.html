@@ -17,186 +17,224 @@
 		/>
 	</head>
 	<body>
+		<div class="container-fluid px-0 py-2 sticky-top rounded-bottom-4">
+			<header>
+				<div class="container-fluid px-0">
+					<div class="row align-items-center">
+						<!-- LEFT: PALAWANDER -->
+						<div class="col-6 col-md-4">
+							<a
+								class="header-title text-dark text-decoration-none"
+							>
+								<span class="fs-4">
+									<span class="pala">PALA</span
+									><span class="wonder">WANDER</span>
+								</span>
+							</a>
+						</div>
 
-	<div class="container-fluid px-0 py-2 sticky-top rounded-bottom-4">
-		<header
-				class="d-flex align-items-center justify-content-between position-relative"
-		>
-			<!-- Header on the left -->
-			<a class="header-title text-dark text-decoration-none">
-						<span class="fs-4">
-							<span class="pala">PALA</span
-							><span class="wonder">WANDER</span>
-						</span>
-			</a>
-
-			<!-- Centered nav -->
-			<nav
-					class="position-absolute top-50 start-50 translate-middle"
-			>
-				<ul class="nav nav-pills">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Our Tours</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">About Us</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Bookings</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">FAQs</a>
-					</li>
-				</ul>
-			</nav>
-
-			<div class="dropdown">
-				<button
-						aria-expanded="false"
-						class="btn"
-						data-bs-toggle="dropdown"
-						type="button"
-				>
-					<i class="bi bi-text-right fs-3"></i>
-				</button>
-				<ul class="dropdown-menu">
-					<li>
-						<a class="dropdown-item" href="#">Action</a>
-					</li>
-					<li>
-						<a class="dropdown-item" href="#"
-						>Another action</a
+						<!-- CENTER NAV (MD+) -->
+						<div
+							class="col-md-4 text-center d-none d-md-flex justify-content-center"
 						>
-					</li>
-					<li>
-						<a class="dropdown-item" href="#"
-						>Something else here</a
-						>
-					</li>
-				</ul>
-			</div>
-		</header>
-	</div>
+							<nav>
+								<ul class="nav nav-pills flex-nowrap">
+									<li class="nav-item">
+										<a class="nav-link text-nowrap" href="#"
+											>Our Tours</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link text-nowrap" href="#"
+											>About Us</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link text-nowrap" href="#"
+											>Bookings</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link text-nowrap" href="#"
+											>FAQs</a
+										>
+									</li>
+								</ul>
+							</nav>
+						</div>
 
-		<section class="first-section d-flex flex-column">
+						<!-- RIGHT: DROPDOWN -->
+						<div class="col-6 col-md-4 text-end">
+							<div class="dropdown">
+								<button
+									class="btn"
+									data-bs-toggle="dropdown"
+									type="button"
+								>
+									<i class="bi bi-list fs-3"></i>
+								</button>
 
-			<div
-				class="carousel slide carousel-fade h-100 rounded-4 overflow-hidden flex-grow-1 mb-3 position-relative"
-				data-bs-ride="carousel"
-				id="carouselExampleIndicators"
-			>
-				<!-- Indicators -->
-				<div class="carousel-indicators">
-					<button
-						aria-current="true"
-						aria-label="Slide 1"
-						class="active"
-						data-bs-slide-to="0"
-						data-bs-target="#carouselExampleIndicators"
-						type="button"
-					></button>
-					<button
-						aria-label="Slide 2"
-						data-bs-slide-to="1"
-						data-bs-target="#carouselExampleIndicators"
-						type="button"
-					></button>
-					<button
-						aria-label="Slide 3"
-						data-bs-slide-to="2"
-						data-bs-target="#carouselExampleIndicators"
-						type="button"
-					></button>
-				</div>
-
-				<!-- Slides wrapper -->
-				<div class="carousel-inner h-100">
-					<div
-						class="carousel-item active h-100"
-						data-bs-interval="5000"
-					>
-						<img
-							alt="..."
-							class="d-block w-100 h-100 object-fit-cover"
-							src="assets/images/crsl_image1.jpg"
-						/>
-						<div class="overlay"></div>
-					</div>
-					<div class="carousel-item h-100" data-bs-interval="5000">
-						<img
-							alt="..."
-							class="d-block w-100 h-100 object-fit-cover"
-							src="assets/images/crsl_image2.jpg"
-						/>
-						<div class="overlay"></div>
-					</div>
-					<div class="carousel-item h-100" data-bs-interval="5000">
-						<img
-							alt="..."
-							class="d-block w-100 h-100 object-fit-cover"
-							src="assets/images/crsl_image3.jpg"
-						/>
-						<div class="overlay"></div>
+								<!-- MENU: Only visible on SM -->
+								<ul
+									class="dropdown-menu dropdown-menu-end d-md-none"
+								>
+									<li>
+										<a class="dropdown-item" href="#"
+											>Our Tours</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											>About Us</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											>Bookings</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											>FAQs</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
+			</header>
+		</div>
 
-			<div class="carousel-fixed-text">
-				<h1 class="crsl-h1">Discover the Hidden Gems of Palawan</h1>
-				<p class="crsl-p">A place where nature and adventure unite</p>
-				<button
-					class="btn btn-outline-dark btn-lg icon-toggle crsl-btn"
-					type="button"
-				>
-					Book Now
-					<i class="bi bi-calendar normal-icon ms-2"></i>
-					<i class="bi bi-calendar-check hover-icon ms-2"></i>
-				</button>
+		<section class="first-section position-relative">
+			<div class="container-fluid h-100">
+				<div class="row h-100">
+					<!-- Carousel wrapper -->
+					<div class="col-12 h-100 position-relative p-0">
+						<div
+							id="carouselExampleIndicators"
+							class="carousel slide carousel-fade h-100 rounded-4 overflow-hidden"
+							data-bs-ride="carousel"
+						>
+							<!-- Indicators -->
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="0"
+									class="active"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="1"
+									aria-label="Slide 2"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="2"
+									aria-label="Slide 3"
+								></button>
+							</div>
+
+							<!-- Slides -->
+							<div class="carousel-inner h-100">
+								<div
+									class="carousel-item active h-100"
+									data-bs-interval="5000"
+								>
+									<img
+										src="assets/images/crsl_image1.jpg"
+										class="d-block w-100 h-100"
+										alt="..."
+									/>
+									<div class="overlay"></div>
+								</div>
+								<div
+									class="carousel-item h-100"
+									data-bs-interval="5000"
+								>
+									<img
+										src="assets/images/crsl_image2.jpg"
+										class="d-block w-100 h-100"
+										alt="..."
+									/>
+									<div class="overlay"></div>
+								</div>
+								<div
+									class="carousel-item h-100"
+									data-bs-interval="5000"
+								>
+									<img
+										src="assets/images/crsl_image3.jpg"
+										class="d-block w-100 h-100"
+										alt="..."
+									/>
+									<div class="overlay"></div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Carousel text -->
+						<div class="carousel-fixed-text text-center">
+							<h1 class="crsl-h1">
+								Discover the Hidden Gems of Palawan
+							</h1>
+							<p class="crsl-p">
+								A place where nature and adventure unite
+							</p>
+							<button
+								class="btn btn-outline-dark btn-lg icon-toggle crsl-btn"
+								type="button"
+							>
+								Book Now
+								<i class="bi bi-calendar normal-icon ms-2"></i>
+								<i
+									class="bi bi-calendar-check hover-icon ms-2"
+								></i>
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<div
-			class="d-flex flex-column justify-content-center align-items-center my-5 mx-5"
-			id="our-tours"
-		>
-			<h1 class="tours-h1">Top values for you</h1>
-			<p class="tours-p">
-				Try variety of benefits when using our services
-			</p>
+		<div class="container my-5" id="our-tours">
+			<div class="row justify-content-center text-center">
+				<div class="col-12">
+					<h1 class="tours-h1">Top values for you</h1>
+					<p class="tours-p">
+						Try variety of benefits when using our services
+					</p>
+				</div>
+			</div>
 
-			<div
-				class="d-flex justify-content-between align-items-stretch w-100 mt-4"
-			>
-				<div
-					class="p-2 flex-column d-flex justify-content-center align-items-center flex-fill"
-				>
+			<div class="row mt-4 justify-content-center text-center">
+				<div class="col-6 col-md-3 mb-3">
 					<i class="bi bi-send fs-5 circle-icon"></i>
 					<h5 class="tours-h5">Airport pickup</h5>
 					<p class="tours-h5-p">
 						We provide escort form the airport to the hotel
 					</p>
 				</div>
-				<div
-					class="p-2 flex-column d-flex justify-content-center align-items-center flex-fill"
-				>
+				<div class="col-6 col-md-3 mb-3">
 					<i class="bi bi-calendar4-week fs-5 circle-icon"></i>
 					<h5 class="tours-h5">Easy booking</h5>
 					<p class="tours-h5-p">
 						Quick and easy booking of tour for upcoming dates
 					</p>
 				</div>
-				<div
-					class="p-2 flex-column d-flex justify-content-center align-items-center flex-fill"
-				>
+				<div class="col-6 col-md-3 mb-3">
 					<i class="bi bi-people fs-5 circle-icon"></i>
 					<h5 class="tours-h5">Best tour guide</h5>
 					<p class="tours-h5-p">
 						Our best tour guide is ready to guide your trip
 					</p>
 				</div>
-				<div
-					class="p-2 flex-column d-flex justify-content-center align-items-center flex-fill"
-				>
+				<div class="col-6 col-md-3 mb-3">
 					<i class="bi bi-percent fs-5 circle-icon"></i>
 					<h5 class="tours-h5">Lots of promos</h5>
 					<p class="tours-h5-p">
@@ -204,32 +242,18 @@
 					</p>
 				</div>
 			</div>
-		                                   </div>
+		</div>
 
+		<div class="container-fluid px-5">
+			<div class="row">
+				<div class="col-12 mb-4">
+					<h1 class="tours-h1">Choose your tour</h1>
+				</div>
+			</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<div
-			class="d-flex flex-column justify-content-center align-items-left mx-5 mb-5"
-		>
-			<h1 class="tours-h1">Choose your tour</h1>
 			<div class="row row-cols-2 row-cols-md-4 g-4 py-4">
 				<div class="col">
-					<div class="card h-100 rounded-4 card-price">
+					<div class="card h-100 rounded-4 card-price card-tour">
 						<img
 							alt="..."
 							class="card-img-top rounded-4 img-price"
@@ -241,7 +265,7 @@
 						<div class="card-body">
 							<p class="rounded-2 card-round">PUERTO PRINCESA</p>
 							<h5 class="card-title">Underground River Toure</h5>
-							<p class="card-text">	`
+							<p class="card-text">
 								Paddle through a world-famous underground cave
 								system filled with stunning rock formations and
 								bats.
@@ -251,13 +275,17 @@
 								<p class="price-tag">₱2,000</p>
 							</div>
 						</div>
-						<button type="button" class="btn btn-outline-dark rounded-circle card-btn" >
+						<button
+							type="button"
+							class="btn btn-outline-dark rounded-circle card-btn"
+						>
 							<i class="bi bi-arrow-right fs-4"></i>
 						</button>
 					</div>
 				</div>
+
 				<div class="col">
-					<div class="card h-100 rounded-4 card-price">
+					<div class="card h-100 rounded-4 card-price card-tour">
 						<img
 							alt="..."
 							class="card-img-top rounded-4 img-price"
@@ -279,13 +307,17 @@
 								<p class="price-tag">₱1,500</p>
 							</div>
 						</div>
-						<button type="button" class="btn btn-outline-dark rounded-circle card-btn">
+						<button
+							type="button"
+							class="btn btn-outline-dark rounded-circle card-btn"
+						>
 							<i class="bi bi-arrow-right fs-4"></i>
 						</button>
 					</div>
 				</div>
+
 				<div class="col">
-					<div class="card h-100 rounded-4 card-price">
+					<div class="card h-100 rounded-4 card-price card-tour">
 						<img
 							alt="..."
 							class="card-img-top rounded-4 img-price"
@@ -306,13 +338,17 @@
 								<p class="price-tag">₱1,800</p>
 							</div>
 						</div>
-						<button type="button" class="btn btn-outline-dark rounded-circle card-btn">
+						<button
+							type="button"
+							class="btn btn-outline-dark rounded-circle card-btn"
+						>
 							<i class="bi bi-arrow-right fs-4"></i>
 						</button>
 					</div>
 				</div>
+
 				<div class="col">
-					<div class="card h-100 rounded-4 card-price">
+					<div class="card h-100 rounded-4 card-price card-tour">
 						<img
 							alt="..."
 							class="card-img-top rounded-4 img-price"
@@ -336,13 +372,18 @@
 								<p class="price-tag">₱1,200</p>
 							</div>
 						</div>
-						<button type="button" class="btn btn-outline-dark rounded-circle card-btn" >
+						<button
+							type="button"
+							class="btn btn-outline-dark rounded-circle card-btn"
+						>
 							<i class="bi bi-arrow-right fs-4"></i>
 						</button>
 					</div>
 				</div>
+
+				<!-- Remaining hidden cards -->
 				<div class="col">
-					<div class="card hidden-card h-100 rounded-4 card-price">
+					<div class="card hidden-card h-100 rounded-4 card-price card-tour">
 						<img
 							alt="..."
 							class="card-img-top rounded-4 img-price"
@@ -365,14 +406,17 @@
 								<p class="price-tag">₱2,500</p>
 							</div>
 						</div>
-						<button type="button" class="btn btn-outline-dark rounded-circle card-btn">
+						<button
+							type="button"
+							class="btn btn-outline-dark rounded-circle card-btn"
+						>
 							<i class="bi bi-arrow-right fs-4"></i>
 						</button>
 					</div>
 				</div>
 
 				<div class="col">
-					<div class="card hidden-card h-100 rounded-4 card-price">
+					<div class="card hidden-card h-100 rounded-4 card-price card-tour">
 						<img
 							alt="..."
 							class="card-img-top rounded-4 img-price"
@@ -396,147 +440,233 @@
 								<p class="price-tag">₱1,500</p>
 							</div>
 						</div>
-						<button type="button" class="btn btn-outline-dark rounded-circle card-btn">
+						<button
+							type="button"
+							class="btn btn-outline-dark rounded-circle card-btn"
+						>
 							<i class="bi bi-arrow-right fs-4"></i>
 						</button>
 					</div>
 				</div>
 			</div>
 
-			<button
-				class="btn btn-outline-primary rounded-pill see-all-btn mb-5"
-				type="button"
-			>
-				See All
-			</button>
-		</div>
-
-		<div class="card mx-5 rounded-4 mb-5 travel-img-card">
-			<img
-				src="assets/images/card-big-img1.jpg"
-				class="card-img travel-img"
-				alt="..."
-			/>
-			<div class="card-img-overlay">
-				<h5
-					class="travel-h5"
-					data-text="Enjoy your travel"
-				></h5>
-				<p
-					class="card-text travel-p"
-					data-text="Discover the most unique and vibrant experience the Palawan have to offer"
-				></p>
+			<div class="row">
+				<div class="col-12 text-center">
+					<button
+						class="btn btn-outline-primary rounded-pill see-all-btn mb-5"
+						type="button"
+					>
+						See All
+					</button>
+				</div>
 			</div>
 		</div>
 
-		<div class="d-flex flex-column justify-content-center align-items-left mx-5 my-5">
-			<div class="row row-cols-2 row-cols-md-2 g-4">
+		<div class="container-fluid px-5">
+			<div class="row">
+				<div class="col-12">
+					<div class="card rounded-4 travel-img-card">
+						<img
+							src="assets/images/card-big-img1.jpg"
+							class="card-img travel-img"
+							alt="..."
+						/>
+						<div class="card-img-overlay">
+							<h5
+								class="travel-h5"
+								data-text="Enjoy your travel"
+							></h5>
+							<p
+								class="card-text travel-p"
+								data-text="Discover the most unique and vibrant experience the Palawan have to offer"
+							></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid py-5 px-5">
+			<div class="row">
 				<!-- Left Column: Title -->
-				<div class="col ">
+				<div class="col-12 col-md-6 mb-4">
 					<h1 class="blogs-h5">Palawan Adventure Blogs</h1>
-					<p class="blogs-p">Discover Palawan, one story at a time.</p>
+					<p class="blogs-p">
+						Discover Palawan, one story at a time.
+					</p>
 				</div>
 
 				<!-- Right Column: Description and Button -->
-				<div class="col">
+				<div class="col-12 col-md-6 mb-4">
 					<p class="blogs-p">
-						Explore captivating stories, travel tips, and unforgettable adventures from fellow travelers as they journey through the pristine beaches, lush landscapes, and hidden gems of Palawan, offering you inspiration, guidance, and a glimpse of the vibrant local culture and breathtaking natural beauty this paradise has to offer.
+						Explore captivating stories, travel tips, and
+						unforgettable adventures from fellow travelers as they
+						journey through the pristine beaches, lush landscapes,
+						and hidden gems of Palawan, offering you inspiration,
+						guidance, and a glimpse of the vibrant local culture and
+						breathtaking natural beauty this paradise has to offer.
 					</p>
-					<button class="btn btn-outline-primary rounded-pill rd-al-artcls my-4" type="button">
+					<button
+						class="btn btn-outline-primary rounded-pill rd-al-artcls my-4"
+						type="button"
+					>
 						Read all articles
 					</button>
 				</div>
+			</div>
+
+			<!-- Exactly 2 cards per row -->
+			<div class="row row-cols-1 row-cols-md-2 g-4">
+				<!-- Card 1 -->
 				<div class="col">
-					<div class="card h-100 rounded-4 card-price">
+					<div class="card h-100 rounded-4 card-price card-blog">
 						<img
-								alt="..."
-								class="card-img-top rounded-4 img-price"
-								src="assets/images/tour-card-img2.jpg"
+							alt="..."
+							class="card-img-top rounded-4 img-price"
+							src="assets/images/tour-card-img2.jpg"
 						/>
 						<div class="rating-badge">
 							<i class="bi bi-clock"></i> 4 min read
 						</div>
 						<div class="card-body">
-							<h5 class="card-title">Chasing Sunlight in El Nido</h5>
-							<p>There’s a reason travelers call El Nido the crown jewel of Palawan. With towering limestone cliffs, hidden lagoons, and beaches that feel untouched by time, every corner feels like stepping into a postcard. My journey here was more than sightseeing—it was a dance with nature, adventure, and moments of pure awe.</p>
+							<h5 class="card-title">
+								Chasing Sunlight in El Nido
+							</h5>
+							<p>
+								There’s a reason travelers call El Nido the
+								crown jewel of Palawan. With towering limestone
+								cliffs, hidden lagoons, and beaches that feel
+								untouched by time, every corner feels like
+								stepping into a postcard. My journey here was
+								more than sightseeing—it was a dance with
+								nature, adventure, and moments of pure awe.
+							</p>
 							<p class="rounded-2 card-round">EL NIDO</p>
 							<p class="rounded-2 card-round">LAGOON</p>
 							<p class="rounded-2 card-round">PARADISE</p>
 							<p class="rounded-2 card-round">ADVENTURE</p>
-
 						</div>
-						<button type="button" class="btn btn-outline-dark rounded-circle card-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-							<i class="bi bi-arrow-right fs-4"></i>
+						<button
+							class="btn btn-outline-primary rounded-pill rd-al-artcls blog-btn my-4"
+							type="button"
+						>
+							Read more <i class="bi bi-arrow-right fs-4"></i>
 						</button>
-
 					</div>
 				</div>
+
+				<!-- Card 2 -->
 				<div class="col">
-					<div class="card h-100 rounded-4 card-price">
+					<div class="card h-100 rounded-4 card-price card-blog">
 						<img
-								alt="..."
-								class="card-img-top rounded-4 img-price"
-								src="assets/images/tour-card-img2.jpg"
+							alt="..."
+							class="card-img-top rounded-4 img-price"
+							src="assets/images/tour-card-img2.jpg"
 						/>
 						<div class="rating-badge">
 							<i class="bi bi-clock"></i> 4 min read
 						</div>
 						<div class="card-body">
-							<h5 class="card-title">Coron Shipwrecks and Sky-High Views</h5>
-							<p>Coron is a destination that surprises you both above and below the water. From breathtaking mountain vistas to eerie underwater shipwrecks teeming with life, this island has a dual personality that keeps every traveler on their toes. My experience was a mix of adrenaline, wonder, and quiet reflection, and it all started at sunrise atop Mt. Tapyas.</p>
+							<h5 class="card-title">
+								Coron Shipwrecks and Sky-High Views
+							</h5>
+							<p>
+								Coron is a destination that surprises you both
+								above and below the water. From breathtaking
+								mountain vistas to eerie underwater shipwrecks
+								teeming with life, this island has a dual
+								personality that keeps every traveler on their
+								toes. My experience was a mix of adrenaline,
+								wonder, and quiet reflection, and it all started
+								at sunrise atop Mt. Tapyas.
+							</p>
 							<p class="rounded-2 card-round">CORON</p>
 							<p class="rounded-2 card-round">SHIPWRECK</p>
 							<p class="rounded-2 card-round">DIVING</p>
 							<p class="rounded-2 card-round">KAYANGAN</p>
 							<p class="rounded-2 card-round">HISTORY</p>
-
-
 						</div>
-						<button type="button" class="btn btn-outline-dark rounded-circle card-btn">
-							<i class="bi bi-arrow-right fs-4"></i>
+						<button
+							class="btn btn-outline-primary rounded-pill rd-al-artcls blog-btn my-4"
+							type="button"
+						>
+							Read more <i class="bi bi-arrow-right fs-4"></i>
 						</button>
 					</div>
 				</div>
+
+				<!-- Card 3 -->
 				<div class="col">
-					<div class="card h-100 rounded-4 card-price">
+					<div class="card h-100 rounded-4 card-price card-blog">
 						<img
-								alt="..."
-								class="card-img-top rounded-4 img-price"
-								src="assets/images/tour-card-img2.jpg"
+							alt="..."
+							class="card-img-top rounded-4 img-price"
+							src="assets/images/tour-card-img2.jpg"
 						/>
 						<div class="rating-badge">
 							<i class="bi bi-clock"></i> 4 min read
 						</div>
 						<div class="card-body">
-							<h5 class="card-title">Puerto Princesa Underground Into the Heart of the Earth</h5>
-							<p>Deep in Palawan lies a world carved over millions of years—Puerto Princesa’s underground river. Entering its shadowy caverns feels like stepping back in time, surrounded by rock formations that defy imagination. Beyond the river, the city offers quiet beaches, glowing mangroves, and experiences that connect you to nature in ways modern life often forgets.</p>
+							<h5 class="card-title">
+								Puerto Princesa Underground Into the Heart of
+								the Earth
+							</h5>
+							<p>
+								>Deep in Palawan lies a world carved over
+								millions of years—Puerto Princesa’s underground
+								river. Entering its shadowy caverns feels like
+								stepping back in time, surrounded by rock
+								formations that defy imagination. Beyond the
+								river, the city offers quiet beaches, glowing
+								mangroves, and experiences that connect you to
+								nature in ways modern life often forgets.
+							</p>
 							<p class="rounded-2 card-round">PUERTO PRINCESA</p>
 							<p class="rounded-2 card-round">CAVE</p>
 							<p class="rounded-2 card-round">NATURE</p>
 						</div>
-						<button type="button" class="btn btn-outline-dark rounded-circle card-btn">
-							<i class="bi bi-arrow-right fs-4"></i>
+
+						<button
+							class="btn btn-outline-primary rounded-pill rd-al-artcls blog-btn my-4"
+							type="button"
+						>
+							Read more <i class="bi bi-arrow-right fs-4"></i>
 						</button>
 					</div>
 				</div>
+
+				<!-- Card 4 -->
 				<div class="col">
-					<div class="card h-100 rounded-4 card-price">
+					<div class="card h-100 rounded-4 card-price card-blog">
 						<img
-								alt="..."
-								class="card-img-top rounded-4 img-price"
-								src="assets/images/tour-card-img2.jpg"
+							alt="..."
+							class="card-img-top rounded-4 img-price"
+							src="assets/images/tour-card-img2.jpg"
 						/>
 						<div class="rating-badge">
 							<i class="bi bi-clock"></i> 5 min read
 						</div>
 						<div class="card-body">
-							<h5 class="card-title">The Last Frontier of Paradise</h5>
-							<p>Balabac is where adventure meets raw, untouched beauty. Far from tourist crowds, this remote archipelago offers sandbars, pink beaches, and turquoise waters that seem almost unreal. Visiting Balabac isn’t just a trip—it’s a journey that challenges you, surprises you, and rewards you with moments of pure paradise.</p>
+							<h5 class="card-title">
+								The Last Frontier of Paradise
+							</h5>
+							<p>
+								Balabac is where adventure meets raw, untouched
+								beauty. Far from tourist crowds, this remote
+								archipelago offers sandbars, pink beaches, and
+								turquoise waters that seem almost unreal.
+								Visiting Balabac isn’t just a trip—it’s a
+								journey that challenges you, surprises you, and
+								rewards you with moments of pure paradise.
+							</p>
 							<p class="rounded-2 card-round">BALABAC</p>
 							<p class="rounded-2 card-round">WILDERNESS</p>
 						</div>
-						<button type="button" class="btn btn-outline-dark rounded-circle card-btn">
-							<i class="bi bi-arrow-right fs-4"></i>
+						<button
+							class="btn btn-outline-primary rounded-pill rd-al-artcls blog-btn my-4"
+							type="button"
+						>
+							Read more <i class="bi bi-arrow-right fs-4"></i>
 						</button>
 					</div>
 				</div>
@@ -544,158 +674,430 @@
 		</div>
 
 
-		<div class="card mx-5 rounded-4 mb-5 card-end-img">
-			<img
-				src="assets/images/card-end-img1.jpg"
-				class="card-img"
-				alt="..."
-			/>
-			<div class="card-img-overlay card-end-text">
-				<h5 class="card-end-h5">
-					Let's get to know Palawan
-				</h5>
-				<button
-					class="btn btn-outline-dark btn-lg icon-toggle crsl-btn"
-					type="button"
-				>
-					Book Now
-				</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="container-fluid px-5 pt-3 pb-5">
+			<div class="row text-center pb-3z">
+				<div class="col-12 mb-4 text-center">
+					<h1 class="tours-h1">What people says</h1>
+					<p class="testimonial-p">Hear from our travelers who experienced the beauty and adventure of Palawan. Their stories and feedback show what makes this paradise truly unforgettable.</p>
+
+				</div>
 			</div>
-		</div>
 
-		<!-- Footer -->
-		<div class="footer-wrapper rounded-4 my-3">
-			<footer class="py-5">
-				<div class="container-fluid">
-					<div class="row align-items-start mx-4">
-						<!-- Left: © 2025 -->
-						<div class="col-auto mb-3">
-							<a
-								class="header-title text-dark text-decoration-none"
-							>
-								<span class="fs-4">
-									<span class="pala">PALA</span
-									><span class="wonder">WANDER</span>
-								</span>
-							</a>
-							<p class="footer-p">A place where nature and adventure unite</p>
-						</div>
+			<!-- Row for the cards -->
+			<div class="row g-4 justify-content-center">
+				<div class="marquee-container">
+					<div class="marquee-track-first">
 
-						<!-- Right: 3 sections aligned to the end with more space -->
-						<div class="col-auto ms-auto mb-3">
-							<div
-								class="d-flex justify-content-between section-mrgn"
-							>
-								<!-- Section 1 -->
-								<div class="me-1 section">
-									<h5 class="footer-h5">About Us</h5>
-									<ul class="nav flex-column">
-										<li class="nav-item mb-2">
-											<a
-												href="#"
-												class="nav-link p-0 text-body-secondary footer-li"
-												>Our guides</a
-											>
-										</li>
-										<li class="nav-item mb-2">
-											<a
-												href="#"
-												class="nav-link p-0 text-body-secondary footer-li"
-												>Blogs</a
-											>
-										</li>
-										<li class="nav-item mb-2">
-											<a
-												href="#"
-												class="nav-link p-0 text-body-secondary footer-li"
-												>Contact us</a
-											>
-										</li>
-									</ul>
-								</div>
+						<!-- ===== ORIGINAL 5 LANDSCAPE CARDS ===== -->
 
-								<!-- test -->
-								<!-- Section 2 -->
-								<div class="me-1 section">
-									<h5 class="footer-h5">FAQs</h5>
-									<ul class="nav flex-column">
-										<li class="nav-item mb-2">
-											<a
-												href="#"
-												class="nav-link p-0 text-body-secondary footer-li"
-												>Personal trip</a
-											>
-										</li>
-										<li class="nav-item mb-2">
-											<a
-												href="#"
-												class="nav-link p-0 text-body-secondary footer-li"
-												>Group trip</a
-											>
-										</li>
-										<li class="nav-item mb-2">
-											<a
-												href="#"
-												class="nav-link p-0 text-body-secondary footer-li"
-												>Tour payment</a
-											>
-										</li>
-									</ul>
-								</div>
-
-								<!-- Section 3 -->
-								<div>
-									<h5 class="footer-h5">Further Information</h5>
-									<ul class="nav flex-column section">
-										<li class="nav-item mb-2">
-											<a
-												href="#"
-												class="nav-link p-0 text-body-secondary footer-li"
-												>Term of use</a
-											>
-										</li>
-										<li class="nav-item mb-2">
-											<a
-												href="#"
-												class="nav-link p-0 text-body-secondary footer-li"
-												>Health & safety</a
-											>
-										</li>
-										<li class="nav-item mb-2">
-											<a
-												href="#"
-												class="nav-link p-0 text-body-secondary footer-li"
-												>Privacy policy</a
-											>
-										</li>
-									</ul>
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 1</h5>
+									<p class="card-text">This is landscape card 1.</p>
+									<a href="#" class="btn btn-primary">Go</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="border-top-dark my-3"></div>
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 2</h5>
+									<p class="card-text">This is landscape card 2.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 3</h5>
+									<p class="card-text">This is landscape card 3.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 4</h5>
+									<p class="card-text">This is landscape card 4.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 5</h5>
+									<p class="card-text">This is landscape card 5.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- ===== DUPLICATED CARDS FOR INFINITE LOOP ===== -->
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 1</h5>
+									<p class="card-text">This is landscape card 1.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 2</h5>
+									<p class="card-text">This is landscape card 2.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 3</h5>
+									<p class="card-text">This is landscape card 3.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 4</h5>
+									<p class="card-text">This is landscape card 4.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 5</h5>
+									<p class="card-text">This is landscape card 5.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row g-4 justify-content-center py-3">
+
+				<div class="marquee-container">
+					<div class="marquee-track-second">
+
+						<!-- ===== ORIGINAL 5 LANDSCAPE CARDS ===== -->
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 1</h5>
+									<p class="card-text">This is landscape card 1.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 2</h5>
+									<p class="card-text">This is landscape card 2.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 3</h5>
+									<p class="card-text">This is landscape card 3.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 4</h5>
+									<p class="card-text">This is landscape card 4.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 5</h5>
+									<p class="card-text">This is landscape card 5.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- ===== DUPLICATED CARDS FOR INFINITE LOOP ===== -->
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 1</h5>
+									<p class="card-text">This is landscape card 1.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 2</h5>
+									<p class="card-text">This is landscape card 2.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 3</h5>
+									<p class="card-text">This is landscape card 3.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 4</h5>
+									<p class="card-text">This is landscape card 4.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-item">
+							<div class="card">
+								<div class="card-body marquee-first">
+									<h5 class="card-title">Card 5</h5>
+									<p class="card-text">This is landscape card 5.</p>
+									<a href="#" class="btn btn-primary">Go</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+				<!-- Duplicate this col for total 5 cards -->
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+		<div class="container-fluid px-5">
+			<div class="row g-0">
+				<div class="col-12">
+					<div class="card rounded-4 mb-5 card-end-img card-know">
+						<img
+							src="assets/images/card-end-img1.jpg"
+							class="card-img"
+							alt="..."
+						/>
+						<div class="card-img-overlay card-end-text">
+							<h5 class="card-end-h5">
+								Let's get to know Palawan
+							</h5>
+							<button
+								class="btn btn-outline-dark btn-lg icon-toggle crsl-btn"
+								type="button"
+							>
+								Book Now
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="footer-wrapper rounded-4 my-3">
+			<footer class="pt-5">
+				<div class="container-fluid">
+					<div class="row align-items-start mx-4">
+						<!-- Left logo -->
+						<div class="col-12 col-md-auto mb-3">
+							<a
+								class="header-title text-dark text-decoration-none"
+							>
+								<span class="fs-4">
+									<span class="pala">PALA</span>
+									<span class="wonder">WANDER</span>
+								</span>
+							</a>
+							<p class="footer-p">
+								A place where nature and adventure unite
+							</p>
+						</div>
+
+						<!-- RIGHT SIDE — NOW PUSHED TO THE END -->
+						<div class="col-12 col-md-7 ms-md-auto mb-3">
+							<div class="container-fluid px-0">
+								<div class="row g-5 justify-content-end">
+									<!-- About Us -->
+									<div class="col-4 col-md-auto">
+										<h5 class="footer-h5">About Us</h5>
+										<ul class="nav flex-column">
+											<li class="nav-item mb-2">
+												<a
+													href="#"
+													class="nav-link p-0 text-body-secondary footer-li"
+													>Our guides</a
+												>
+											</li>
+											<li class="nav-item mb-2">
+												<a
+													href="#"
+													class="nav-link p-0 text-body-secondary footer-li"
+													>Blogs</a
+												>
+											</li>
+											<li class="nav-item mb-2">
+												<a
+													href="#"
+													class="nav-link p-0 text-body-secondary footer-li"
+													>Contact us</a
+												>
+											</li>
+										</ul>
+									</div>
+
+									<!-- FAQs -->
+									<div class="col-4 col-md-auto">
+										<h5 class="footer-h5">FAQs</h5>
+										<ul class="nav flex-column">
+											<li class="nav-item mb-2">
+												<a
+													href="#"
+													class="nav-link p-0 text-body-secondary footer-li"
+													>Personal trip</a
+												>
+											</li>
+											<li class="nav-item mb-2">
+												<a
+													href="#"
+													class="nav-link p-0 text-body-secondary footer-li"
+													>Group trip</a
+												>
+											</li>
+											<li class="nav-item mb-2">
+												<a
+													href="#"
+													class="nav-link p-0 text-body-secondary footer-li"
+													>Tour payment</a
+												>
+											</li>
+										</ul>
+									</div>
+
+									<!-- Further Information -->
+									<div class="col-4 col-md-auto">
+										<h5 class="footer-h5">
+											Further Information
+										</h5>
+										<ul class="nav flex-column">
+											<li class="nav-item mb-2">
+												<a
+													href="#"
+													class="nav-link p-0 text-body-secondary footer-li"
+													>Term of use</a
+												>
+											</li>
+											<li class="nav-item mb-2">
+												<a
+													href="#"
+													class="nav-link p-0 text-body-secondary footer-li"
+													>Health & safety</a
+												>
+											</li>
+											<li class="nav-item mb-2">
+												<a
+													href="#"
+													class="nav-link p-0 text-body-secondary footer-li"
+													>Privacy policy</a
+												>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="border-top-dark my-3">
+							<p class="my-1 footer-low-p">@2025 Imus, Cavite</p>
+						</div>
 					</div>
 				</div>
 			</footer>
 		</div>
-
-	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="exampleModalLabel">Palawan Adventure Blogs</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					...
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
 
 		<script src="script.js"></script>
 		<script

@@ -16,6 +16,25 @@
 	}
 }
 
+@keyframes marquee-first {
+	0% {
+		transform: translateX(-50%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+
+@keyframes marquee-second {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
 @font-face {
 	font-family: "Cina Geo";
 	src: url("assets/fonts/CinaGEOTest-ExtraLight-BF6401589a08ee8.otf")
@@ -125,7 +144,8 @@ body {
 	color: black;
 	border: 1px solid transparent;
 	transition: all 0.3s ease;
-	z-index: 3;
+	position: relative;
+	z-index: 2;
 }
 
 .crsl-btn:hover {
@@ -135,6 +155,49 @@ body {
 	backdrop-filter: blur(10px);
 	box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
 	transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+	/* LG and below */
+	.crsl-h1 {
+		font-size: 60px;
+	}
+	.crsl-p {
+		font-size: 16px;
+	}
+	.crsl-btn {
+		font-size: 14px;
+		width: 120px;
+	}
+}
+
+@media (max-width: 768px) {
+	/* MD and below, tablets */
+	.crsl-h1 {
+		font-size: 45px;
+	}
+	.crsl-p {
+		font-size: 14px;
+	}
+	.crsl-btn {
+		font-size: 13px;
+		width: 110px;
+	}
+}
+
+@media (max-width: 576px) {
+	/* SM and below, phones */
+	.crsl-h1 {
+		font-size: 30px;
+	}
+	.crsl-p {
+		font-size: 12px;
+	}
+	.crsl-btn {
+		font-size: 12px;
+		width: 100px;
+	}
 }
 
 .carousel-item .overlay {
@@ -165,8 +228,8 @@ body {
 	display: none;
 }
 
-.icon-toggle .hover-icon {
-	display: none;
+.hover-icon {
+	display: none !important;
 }
 
 .icon-toggle:hover .normal-icon {
@@ -174,7 +237,7 @@ body {
 }
 
 .icon-toggle:hover .hover-icon {
-	display: inline-block;
+	display: inline-block !important;
 }
 
 .dropdown .bi:hover {
@@ -193,6 +256,7 @@ body {
 	font-family: "Cina Geo", sans-serif;
 	font-weight: 300;
 	font-size: 16px;
+	color: #393939 !important;
 }
 
 .d-flex .flex-fill h5 {
@@ -204,6 +268,9 @@ body {
 	font-family: "Cina Geo", sans-serif;
 	font-weight: 400;
 	font-size: 18px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 .tours-h5-p {
@@ -211,6 +278,8 @@ body {
 	font-weight: 300;
 	font-size: 14px;
 	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 }
 
@@ -292,13 +361,15 @@ body {
 	border: 1px solid rgba(255, 255, 255, 0.2); /* subtle glass border */
 }
 
-.card {
+.card-tour, .card-blog, .card-know {
 	position: relative;
 	min-height: 460px; /* keeps cards equal height */
 	border-radius: 0.5rem;
 	overflow: hidden;
 	transition: all 0.4s ease; /* smooth transitions */
 }
+
+
 
 .card-body {
 	padding-bottom: 60px; /* adds space so price doesn’t overlap text */
@@ -474,6 +545,8 @@ body {
 	font-family: "Cina Geo", sans-serif;
 	font-weight: 300;
 	font-size: 16px;
+	text-align: justify;
+	color: #393939 !important;
 }
 
 .card-title {
@@ -493,33 +566,99 @@ body {
 }
 
 .footer-p {
-    font-family: "Cina Geo", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    width: 70%;
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	width: 70%;
 }
 
 .footer-h5 {
-    font-family: "Cina Geo", sans-serif;
-    font-weight: 600;
-    font-size: 18px;
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+
 }
 
 .footer-li {
-    font-family: "Cina Geo", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: #393939 !important;
 }
 
 .card-btn {
-    position: absolute;
-    bottom: 20px; /* distance from bottom */
-    right: 20px;  /* distance from right */
-    width: 50px;
-    height: 50px;
+	position: absolute;
+	bottom: 20px; /* distance from bottom */
+	right: 20px; /* distance from right */
+	width: 50px;
+	height: 50px;
 }
 
 .card-btn:hover {
-    background-color: black !important;
-    color: white !important;
+	background-color: black !important;
+	color: white !important;
 }
+
+.footer-low-p{
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	color: #737373;
+}
+
+.blog-btn {
+	position: absolute;
+	bottom: 0px; /* Increase distance from the bottom */
+	right: 20px;  /* Optional: Increase distance from the right */
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3px 14px; /* Adjust padding for smaller height */
+	font-size: 1rem; /* Keep same font size */
+}
+
+.blog-btn i {
+	margin-left: 5px;
+}
+
+.blog-btn:hover {
+	background-color: black !important;
+	color: white !important;
+}
+
+.marquee-container {
+	overflow: hidden;
+	width: 100%;
+}
+
+.marquee-track-first {
+	display: flex;
+	gap: 1.5rem;
+	width: max-content;
+	animation: marquee-first 20s linear infinite;
+}
+
+.marquee-track-second {
+	display: flex;
+	gap: 1.5rem;
+	width: max-content;
+	animation: marquee-second 20s linear infinite;
+}
+
+.marquee-first {
+	flex: 0 0 auto;
+	width: 24rem;
+	height: 14rem;
+}
+
+
+.testimonial-p {
+	font-family: "Cina Geo", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	width: 50%;       /* keeps the text narrower */
+	margin: 0 auto;   /* centers the paragraph */
+	text-align: center; /* centers text inside the paragraph */
+	color: #393939 !important;
+}
+

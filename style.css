@@ -665,6 +665,7 @@ body {
     color: #aaa;
 }
 
+
 .newsletter-btn {
     background-color: #000; /* specific color fallback */
     color: white;
@@ -680,7 +681,6 @@ body {
 .newsletter-btn:hover {
     background-color: #333;
 }
-
 
 /* --- FOOTER TYPOGRAPHY --- */
 .footer-p {

@@ -10,7 +10,7 @@
 			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
 			rel="stylesheet"
 		/>
-		<link href="style.css" rel="stylesheet" />
+		<link href="assets/styles/style.css" rel="stylesheet" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
 			rel="stylesheet"
@@ -40,27 +40,27 @@
 							<nav>
 								<ul class="nav nav-pills flex-nowrap">
 									<li class="nav-item">
-										<a class="nav-link text-nowrap" href="#"
+										<a class="nav-link text-nowrap hover-underline-animation left" href="#home"
 											>Home</a
 										>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link text-nowrap" href="#"
+										<a class="nav-link text-nowrap hover-underline-animation left" href="#tour"
 											>Our Tours</a
 										>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link text-nowrap" href="#"
+										<a class="nav-link text-nowrap hover-underline-animation left" href="#blogs"
 										>Blogs</a
 										>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link text-nowrap" href="#"
+										<a class="nav-link text-nowrap hover-underline-animation left" href="bookings-page.html"
 											>Bookings</a
 										>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link text-nowrap" href="#"
+										<a class="nav-link text-nowrap hover-underline-animation left" href="faqs-page.html"
 											>FAQs</a
 										>
 									</li>
@@ -84,17 +84,17 @@
 									class="dropdown-menu dropdown-menu-end d-md-none"
 								>
 									<li>
-										<a class="dropdown-item" href="#"
+										<a class="dropdown-item" href="#home"
 											>Home</a
 										>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#"
+										<a class="dropdown-item" href="#tour"
 											>Our Tours</a
 										>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#"
+										<a class="dropdown-item" href="#blogs"
 										>Blogs</a
 										>
 									</li>
@@ -116,7 +116,7 @@
 			</header>
 		</div>
 
-		<section class="first-section position-relative">
+		<section class="first-section position-relative" id="home">
 			<div class="container-fluid h-100">
 				<div class="row h-100">
 					<!-- Carousel wrapper -->
@@ -154,7 +154,7 @@
 							<div class="carousel-inner h-100">
 								<div
 									class="carousel-item active h-100"
-									data-bs-interval="5000"
+									data-bs-interval="2000"
 								>
 									<img
 										src="assets/images/crsl_image1.jpg"
@@ -165,7 +165,7 @@
 								</div>
 								<div
 									class="carousel-item h-100"
-									data-bs-interval="5000"
+									data-bs-interval="3000"
 								>
 									<img
 										src="assets/images/crsl_image2.jpg"
@@ -176,7 +176,7 @@
 								</div>
 								<div
 									class="carousel-item h-100"
-									data-bs-interval="5000"
+									data-bs-interval="3000"
 								>
 									<img
 										src="assets/images/crsl_image3.jpg"
@@ -258,7 +258,7 @@
 			</div>
 		</div>
 
-		<div class="container-fluid px-5">
+		<div class="container-fluid px-5" id="tour">
 			<div class="row">
 				<div class="col-12 mb-4">
 					<h1 class="tours-h1">Choose your tour</h1>
@@ -476,7 +476,7 @@
 			</div>
 		</div>
 
-		<div class="container-fluid px-5">
+		<div class="container-fluid px-5 pt-4">
 			<div class="row">
 				<div class="col-12">
 					<div class="card rounded-4 travel-img-card">
@@ -500,7 +500,7 @@
 			</div>
 		</div>
 
-		<div class="container-fluid py-5 px-5">
+		<div class="container-fluid py-5 px-5" id="blogs">
 			<div class="row">
 				<!-- Left Column: Title -->
 				<div class="col-12 col-md-6 mb-4">
@@ -1424,8 +1424,7 @@
 					<div class="col-md-6 newsletter-text pe-md-5	">
 					<h3 class="newsletter-title">Subscribe To Our Newsletter</h3>
 					<p class="newsletter-desc mb-0 newsletter-sub">
-						Sign up today. Writing copy is time-consuming and difficult.
-						Headlime's artificial intelligence can take your thoughts.
+						Sign up today for exclusive travel tips, upcoming tour announcements, and hidden gems to inspire your next adventure.
 					</p>
 				</div>
 
@@ -1515,7 +1514,9 @@
 			</footer>
 		</div>
 
-		<script src="script.js"></script>
+		<script src="assets/scripts/toggle-cards.js"></script>
+		<script src="assets/scripts/typewriter-animation.js"></script>
+		<script defer src="assets/scripts/activePage.js"></script>
 		<script
 			crossorigin="anonymous"
 			integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

@@ -1,13 +1,3 @@
-document.querySelector(".see-all-btn").addEventListener("click", function () {
-	// Show all hidden cards
-	document.querySelectorAll(".hidden-card").forEach((card) => {
-		card.style.display = "block";
-	});
-
-	// Optionally hide the "See All" button after clicking
-	this.style.display = "none";
-});
-
 function typeWriterSequential(h5El, pEl) {
 	const h5Text = h5El.dataset.text;
 	const pText = pEl.dataset.text;

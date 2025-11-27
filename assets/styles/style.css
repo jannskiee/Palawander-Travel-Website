@@ -37,7 +37,7 @@
 
 @font-face {
 	font-family: "Cina Geo";
-	src: url("assets/fonts/CinaGEOTest-ExtraLight-BF6401589a08ee8.otf")
+	src: url("../fonts/CinaGEOTest-ExtraLight-BF6401589a08ee8.otf")
 		format("opentype");
 	font-weight: 300;
 	font-style: normal;
@@ -46,7 +46,7 @@
 /* Regular */
 @font-face {
 	font-family: "Cina Geo";
-	src: url("assets/fonts/CinaGEOTest-Regular-BF640158993b49e.otf")
+	src: url("../fonts/CinaGEOTest-Regular-BF640158993b49e.otf")
 		format("opentype");
 	font-weight: 400;
 	font-style: normal;
@@ -55,7 +55,7 @@
 /* Semi-Bold */
 @font-face {
 	font-family: "Cina Geo";
-	src: url("assets/fonts/CinaGEOTest-SemiBold-BF64015899cbc35.otf")
+	src: url("../fonts/CinaGEOTest-SemiBold-BF64015899cbc35.otf")
 		format("opentype");
 	font-weight: 600;
 	font-style: normal;
@@ -64,10 +64,19 @@
 /* Bold */
 @font-face {
 	font-family: "Cina Geo";
-	src: url("assets/fonts/CinaGEOTest-Bold-BF64015899f3908.otf")
+	src: url("../fonts/CinaGEOTest-Bold-BF64015899f3908.otf")
 		format("opentype");
 	font-weight: 700;
 	font-style: normal;
+}
+
+#home, #tour {
+	scroll-margin-top: 76px;
+}
+
+#blogs {
+	scroll-margin-top: 60px;
+
 }
 
 body {
@@ -813,3 +822,31 @@ body {
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.hover-underline-animation {
+	display: inline-block;
+	position: relative;
+}
+
+.hover-underline-animation::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+	transform: scaleX(1);
+}
+
+.hover-underline-animation.left::after {
+	transform-origin: bottom left;
+}
+
+.hover-underline-animation.left:hover::after {
+	transform-origin: bottom left;
+}

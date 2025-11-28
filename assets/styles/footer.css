@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "Cina Geo";
+    src: url("../fonts/CinaGEOTest-ExtraLight-BF6401589a08ee8.otf")
+    format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Regular */
+@font-face {
+    font-family: "Cina Geo";
+    src: url("../fonts/CinaGEOTest-Regular-BF640158993b49e.otf")
+    format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Semi-Bold */
+@font-face {
+    font-family: "Cina Geo";
+    src: url("../fonts/CinaGEOTest-SemiBold-BF64015899cbc35.otf")
+    format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: "Cina Geo";
+    src: url("../fonts/CinaGEOTest-Bold-BF64015899f3908.otf")
+    format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+.footer-p {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    width: 70%;
+}
+
+.footer-h5 {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.footer-li {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #393939 !important;
+}
+
+.footer-wrapper {
+    /* This background applies to the bottom part (the links) */
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    /* Crucial: clips the inner white card to these rounded corners */
+    overflow: hidden;
+}
+
+/* --- NEWSLETTER CARD (White Section) --- */
+.newsletter-card {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    /* The "Connection" line */
+    border: 1px solid #e0e0e0;
+}
+
+.newsletter-title {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #000;
+    margin-bottom: 10px;
+
+    max-width: 400px; /* Keeps the text block narrow */
+
+    /* THIS PUSHES THE BLOCK TO THE RIGHT */
+    margin-left: auto;
+    margin-right: 0;
+    text-align: left;
+}
+
+.newsletter-desc {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #6c757d;
+
+    max-width: 400px; /* Keeps the text block narrow */
+
+    /* THIS PUSHES THE BLOCK TO THE RIGHT */
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.newsletter-sub {
+    text-align: left;
+}
+
+/* --- INPUT PILL DESIGN --- */
+.newsletter-input-wrapper {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+
+    /* CHANGE: Align to the left side now */
+    margin-right: auto;
+    margin-left: 0;
+
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+.newsletter-input-wrapper input {
+    border: none;
+    background: transparent;
+    padding: 10px 20px;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.newsletter-input-wrapper input::placeholder {
+    color: #aaa;
+}
+
+
+.newsletter-btn {
+    background-color: #000; /* specific color fallback */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+
+.newsletter-btn:hover {
+    background-color: #333;
+}

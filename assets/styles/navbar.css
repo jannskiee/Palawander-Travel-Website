@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Cina Geo";
+    src: url("../fonts/CinaGEOTest-ExtraLight-BF6401589a08ee8.otf")
+    format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Regular */
+@font-face {
+    font-family: "Cina Geo";
+    src: url("../fonts/CinaGEOTest-Regular-BF640158993b49e.otf")
+    format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Semi-Bold */
+@font-face {
+    font-family: "Cina Geo";
+    src: url("../fonts/CinaGEOTest-SemiBold-BF64015899cbc35.otf")
+    format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: "Cina Geo";
+    src: url("../fonts/CinaGEOTest-Bold-BF64015899f3908.otf")
+    format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+}
+
+.hover-underline-animation.left::after {
+    transform-origin: bottom left;
+}
+
+.hover-underline-animation.left:hover::after {
+    transform-origin: bottom left;
+}
+
+#home, #tour, #cards-blogs {
+    scroll-margin-top: 76px;
+}
+
+#blogs {
+    scroll-margin-top: 60px;
+
+}
+
+body {
+    background-color: var(--white-color);
+    padding: 0 50px !important;
+    margin: 0;
+}
+
+.pala {
+    font-family: "Cina Geo", sans-serif; /* elegant serif font */
+    font-weight: 300;
+}
+
+.wonder {
+    font-family: "Cina Geo", sans-serif; /* modern sans-serif font */
+    font-weight: 700;
+}
+
+.nav-link {
+    color: black !important;
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-pills .nav-link:hover {
+    color: gray !important;
+    background-color: transparent !important;
+}
+
+.dropdown .btn {
+    padding-right: 0px;
+}
+
+.first-section {
+    height: 90vh; /* entire viewport */
+}

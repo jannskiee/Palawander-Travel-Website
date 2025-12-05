@@ -11,110 +11,15 @@
 			rel="stylesheet"
 		/>
 		<link href="assets/styles/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/styles/navbar.css">
+        <link rel="stylesheet" href="assets/styles/footer.css">
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
 			rel="stylesheet"
 		/>
 	</head>
 	<body>
-		<div class="container-fluid px-0 py-2 sticky-top rounded-bottom-4">
-			<header>
-				<div class="container-fluid px-0">
-					<div class="row align-items-center">
-						<!-- LEFT: PALAWANDER -->
-						<div class="col-6 col-md-4">
-							<a
-								class="header-title text-dark text-decoration-none"
-							>
-								<span class="fs-4">
-									<span class="pala">PALA</span
-									><span class="wonder">WANDER</span>
-								</span>
-							</a>
-						</div>
-
-						<!-- CENTER NAV (MD+) -->
-						<div
-							class="col-md-4 text-center d-none d-md-flex justify-content-center"
-						>
-							<nav>
-								<ul class="nav nav-pills flex-nowrap">
-									<li class="nav-item">
-										<a class="nav-link text-nowrap hover-underline-animation left" href="#home"
-											>Home</a
-										>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link text-nowrap hover-underline-animation left" href="#tour"
-											>Our Tours</a
-										>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link text-nowrap hover-underline-animation left" href="#blogs"
-										>Blogs</a
-										>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link text-nowrap hover-underline-animation left" href="bookings-page.html"
-											>Bookings</a
-										>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link text-nowrap hover-underline-animation left" href="faqs-page.html"
-											>FAQs</a
-										>
-									</li>
-								</ul>
-							</nav>
-						</div>
-
-						<!-- RIGHT: DROPDOWN -->
-						<div class="col-6 col-md-4 text-end">
-							<div class="dropdown">
-								<button
-									class="btn"
-									data-bs-toggle="dropdown"
-									type="button"
-								>
-									<i class="bi bi-list fs-3"></i>
-								</button>
-
-								<!-- MENU: Only visible on SM -->
-								<ul
-									class="dropdown-menu dropdown-menu-end d-md-none"
-								>
-									<li>
-										<a class="dropdown-item" href="#home"
-											>Home</a
-										>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#tour"
-											>Our Tours</a
-										>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#blogs"
-										>Blogs</a
-										>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#"
-											>Bookings</a
-										>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#"
-											>FAQs</a
-										>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-		</div>
+        <?php include 'navbar.php'; ?>
 
 		<section class="first-section position-relative" id="home">
 			<div class="container-fluid h-100">
@@ -258,247 +163,147 @@
 			</div>
 		</div>
 
-		<div class="container-fluid px-5" id="tour">
-			<div class="row">
-				<div class="col-12 mb-4">
-					<h1 class="tours-h1">Choose your tour</h1>
-				</div>
-			</div>
 
-			<div class="row row-cols-2 row-cols-md-4 g-4 py-4">
-				<div class="col">
-					<div class="card h-100 rounded-4 card-price card-tour">
-						<img
-							alt="..."
-							class="card-img-top rounded-4 img-price"
-							src="assets/images/tour-card-img-1.jpg"
-						/>
-						<div class="rating-badge">
-							4.7<i class="bi bi-star-fill"></i>
-						</div>
-						<div class="card-body">
-							<p class="rounded-2 card-round">PUERTO PRINCESA</p>
-							<h5 class="card-title">Underground River Toure</h5>
-							<p class="card-text">
-								Paddle through a world-famous underground cave
-								system filled with stunning rock formations and
-								bats.
-							</p>
-							<div class="price-container">
-								<p class="price-text">STARTS AT</p>
-								<p class="price-tag">₱2,000</p>
-							</div>
-						</div>
-						<button
-							type="button"
-							class="btn btn-outline-dark rounded-circle card-btn"
-						>
-							<i class="bi bi-arrow-right fs-4"></i>
-						</button>
-					</div>
-				</div>
+        <div class="container-fluid px-0 position-relative" id="tour">
 
-				<div class="col">
-					<div class="card h-100 rounded-4 card-price card-tour">
-						<img
-							alt="..."
-							class="card-img-top rounded-4 img-price"
-							src="assets/images/tour-card-img2.jpg"
-						/>
-						<div class="rating-badge">
-							5.0<i class="bi bi-star-fill"></i>
-						</div>
-						<div class="card-body">
-							<p class="rounded-2 card-round">EL NIDO</p>
-							<h5 class="card-title">Island Hopping Tour</h5>
-							<p class="card-text">
-								Explore lagoons, beaches, and limestone cliffs —
-								including the iconic Big Lagoon and 7 Commandos
-								Beach.
-							</p>
-							<div class="price-container">
-								<p class="price-text">STARTS AT</p>
-								<p class="price-tag">₱1,500</p>
-							</div>
-						</div>
-						<button
-							type="button"
-							class="btn btn-outline-dark rounded-circle card-btn"
-						>
-							<i class="bi bi-arrow-right fs-4"></i>
-						</button>
-					</div>
-				</div>
+            <div class="container-fluid px-3 px-md-5 mb-4">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="tours-h1">Choose your tour</h1>
+                    </div>
+                </div>
+            </div>
 
-				<div class="col">
-					<div class="card h-100 rounded-4 card-price card-tour">
-						<img
-							alt="..."
-							class="card-img-top rounded-4 img-price"
-							src="assets/images/tour-card-img3.jpg"
-						/>
-						<div class="rating-badge">
-							4.8<i class="bi bi-star-fill"></i>
-						</div>
-						<div class="card-body">
-							<p class="rounded-2 card-round">CORON</p>
-							<h5 class="card-title">Ultimate Island Tour</h5>
-							<p class="card-text">
-								Swim in crystal-clear lakes, snorkel WWII
-								shipwrecks, and relax on white-sand beaches.
-							</p>
-							<div class="price-container">
-								<p class="price-text">STARTS AT</p>
-								<p class="price-tag">₱1,800</p>
-							</div>
-						</div>
-						<button
-							type="button"
-							class="btn btn-outline-dark rounded-circle card-btn"
-						>
-							<i class="bi bi-arrow-right fs-4"></i>
-						</button>
-					</div>
-				</div>
+            <div class="tour-carousel-wrapper position-relative">
 
-				<div class="col">
-					<div class="card h-100 rounded-4 card-price card-tour">
-						<img
-							alt="..."
-							class="card-img-top rounded-4 img-price"
-							src="assets/images/tour-card-img4.jpg"
-						/>
-						<div class="rating-badge">
-							4.7<i class="bi bi-star-fill"></i>
-						</div>
-						<div class="card-body">
-							<p class="rounded-2 card-round">SAN VICENTE</p>
-							<h5 class="card-title">
-								Port Barton Island Hopping
-							</h5>
-							<p class="card-text">
-								Visit remote islands, vibrant coral reefs, and
-								turtle sanctuaries around peaceful Port Barton
-								Bay.
-							</p>
-							<div class="price-container">
-								<p class="price-text">STARTS AT</p>
-								<p class="price-tag">₱1,200</p>
-							</div>
-						</div>
-						<button
-							type="button"
-							class="btn btn-outline-dark rounded-circle card-btn"
-						>
-							<i class="bi bi-arrow-right fs-4"></i>
-						</button>
-					</div>
-				</div>
+                <button class="scroll-arrow scroll-left d-none d-sm-flex" id="scrollLeftBtn">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
 
-				<!-- Remaining hidden cards -->
-				<div class="col">
-					<div class="card hidden-card h-100 rounded-4 card-price card-tour">
-						<img
-							alt="..."
-							class="card-img-top rounded-4 img-price"
-							src="assets/images/tour-card-img5.jpg"
-						/>
-						<div class="rating-badge">
-							4.7<i class="bi bi-star-fill"></i>
-						</div>
-						<div class="card-body">
-							<p class="rounded-2 card-round">BALABAC</p>
-							<h5 class="card-title">
-								Balabac Island Expedition
-							</h5>
-							<p class="card-text">
-								Hop across pristine islands and sandbars with
-								turquoise waters and untouched tropical scenery.
-							</p>
-							<div class="price-container">
-								<p class="price-text">STARTS AT</p>
-								<p class="price-tag">₱2,500</p>
-							</div>
-						</div>
-						<button
-							type="button"
-							class="btn btn-outline-dark rounded-circle card-btn"
-						>
-							<i class="bi bi-arrow-right fs-4"></i>
-						</button>
-					</div>
-				</div>
+                <div class="tours-scroll-container" id="tourContainer">
 
-				<div class="col">
-					<div class="card hidden-card h-100 rounded-4 card-price card-tour">
-						<img
-							alt="..."
-							class="card-img-top rounded-4 img-price"
-							src="assets/images/tour-card-img6.jpg"
-						/>
-						<div class="rating-badge">
-							4.6<i class="bi bi-star-fill"></i>
-						</div>
-						<div class="card-body">
-							<p class="rounded-2 card-round">TAYTAY</p>
-							<h5 class="card-title">
-								Fort Santa Isabel & Island Hopping Tour
-							</h5>
-							<p class="card-text">
-								Discover Taytay’s 17th-century Spanish fort,
-								then sail to nearby islands with hidden beaches
-								and coral reefs.
-							</p>
-							<div class="price-container">
-								<p class="price-text">STARTS AT</p>
-								<p class="price-tag">₱1,500</p>
-							</div>
-						</div>
-						<button
-							type="button"
-							class="btn btn-outline-dark rounded-circle card-btn"
-						>
-							<i class="bi bi-arrow-right fs-4"></i>
-						</button>
-					</div>
-				</div>
-			</div>
+                    <div class="tour-card-fixed">
+                        <div class="card h-100 rounded-4 card-price card-tour">
+                            <img src="assets/images/tour-card-img-1.jpg" class="card-img-top rounded-4 img-price" alt="...">
+                            <div class="rating-badge">4.7<i class="bi bi-star-fill"></i></div>
+                            <div class="card-body">
+                                <p class="rounded-2 card-round">PUERTO PRINCESA</p>
+                                <h5 class="card-title">Underground River Tour</h5>
+                                <p class="card-text">Paddle through a world-famous underground cave system filled with stunning rock formations.</p>
+                                <div class="price-container">
+                                    <p class="price-text">STARTS AT</p>
+                                    <p class="price-tag">₱2,000</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark rounded-circle card-btn">
+                                <i class="bi bi-arrow-right fs-4"></i>
+                            </button>
+                        </div>
+                    </div>
 
-			<div class="row">
-				<div class="col-12 text-center">
-					<button
-						class="btn btn-outline-primary rounded-pill see-all-btn mb-5"
-						type="button"
-					>
-						See All
-					</button>
-				</div>
-			</div>
-		</div>
+                    <div class="tour-card-fixed">
+                        <div class="card h-100 rounded-4 card-price card-tour">
+                            <img src="assets/images/tour-card-img2.jpg" class="card-img-top rounded-4 img-price" alt="...">
+                            <div class="rating-badge">5.0<i class="bi bi-star-fill"></i></div>
+                            <div class="card-body">
+                                <p class="rounded-2 card-round">EL NIDO</p>
+                                <h5 class="card-title">Island Hopping Tour</h5>
+                                <p class="card-text">Explore lagoons, beaches, and limestone cliffs — including the iconic Big Lagoon.</p>
+                                <div class="price-container">
+                                    <p class="price-text">STARTS AT</p>
+                                    <p class="price-tag">₱1,500</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark rounded-circle card-btn">
+                                <i class="bi bi-arrow-right fs-4"></i>
+                            </button>
+                        </div>
+                    </div>
 
-		<div class="container-fluid px-5 pt-4">
-			<div class="row">
-				<div class="col-12">
-					<div class="card rounded-4 travel-img-card">
-						<img
-							src="assets/images/card-big-img1.jpg"
-							class="card-img travel-img"
-							alt="..."
-						/>
-						<div class="card-img-overlay">
-							<h5
-								class="travel-h5"
-								data-text="Enjoy your travel"
-							></h5>
-							<p
-								class="card-text travel-p"
-								data-text="Discover the most unique and vibrant experience the Palawan have to offer"
-							></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                    <div class="tour-card-fixed">
+                        <div class="card h-100 rounded-4 card-price card-tour">
+                            <img src="assets/images/tour-card-img3.jpg" class="card-img-top rounded-4 img-price" alt="...">
+                            <div class="rating-badge">4.8<i class="bi bi-star-fill"></i></div>
+                            <div class="card-body">
+                                <p class="rounded-2 card-round">CORON</p>
+                                <h5 class="card-title">Ultimate Island Tour</h5>
+                                <p class="card-text">Swim in crystal-clear lakes, snorkel WWII shipwrecks, and relax on white-sand beaches.</p>
+                                <div class="price-container">
+                                    <p class="price-text">STARTS AT</p>
+                                    <p class="price-tag">₱1,800</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark rounded-circle card-btn">
+                                <i class="bi bi-arrow-right fs-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tour-card-fixed">
+                        <div class="card h-100 rounded-4 card-price card-tour">
+                            <img src="assets/images/tour-card-img4.jpg" class="card-img-top rounded-4 img-price" alt="...">
+                            <div class="rating-badge">4.7<i class="bi bi-star-fill"></i></div>
+                            <div class="card-body">
+                                <p class="rounded-2 card-round">SAN VICENTE</p>
+                                <h5 class="card-title">Port Barton Hopping</h5>
+                                <p class="card-text">Visit remote islands, vibrant coral reefs, and turtle sanctuaries around peaceful Port Barton.</p>
+                                <div class="price-container">
+                                    <p class="price-text">STARTS AT</p>
+                                    <p class="price-tag">₱1,200</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark rounded-circle card-btn">
+                                <i class="bi bi-arrow-right fs-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tour-card-fixed">
+                        <div class="card h-100 rounded-4 card-price card-tour">
+                            <img src="assets/images/tour-card-img5.jpg" class="card-img-top rounded-4 img-price" alt="...">
+                            <div class="rating-badge">4.7<i class="bi bi-star-fill"></i></div>
+                            <div class="card-body">
+                                <p class="rounded-2 card-round">BALABAC</p>
+                                <h5 class="card-title">Balabac Expedition</h5>
+                                <p class="card-text">Hop across pristine islands and sandbars with turquoise waters.</p>
+                                <div class="price-container">
+                                    <p class="price-text">STARTS AT</p>
+                                    <p class="price-tag">₱2,500</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark rounded-circle card-btn">
+                                <i class="bi bi-arrow-right fs-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tour-card-fixed">
+                        <div class="card h-100 rounded-4 card-price card-tour">
+                            <img src="assets/images/tour-card-img6.jpg" class="card-img-top rounded-4 img-price" alt="...">
+                            <div class="rating-badge">4.6<i class="bi bi-star-fill"></i></div>
+                            <div class="card-body">
+                                <p class="rounded-2 card-round">TAYTAY</p>
+                                <h5 class="card-title">Fort Santa Isabel</h5>
+                                <p class="card-text">Discover Taytay’s 17th-century Spanish fort, then sail to nearby islands.</p>
+                                <div class="price-container">
+                                    <p class="price-text">STARTS AT</p>
+                                    <p class="price-tag">₱1,500</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark rounded-circle card-btn">
+                                <i class="bi bi-arrow-right fs-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div style="min-width: 20px;"></div>
+
+                </div> <button class="scroll-arrow scroll-right d-none d-sm-flex" id="scrollRightBtn">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+
+            </div>
+        </div>
 
 		<div class="container-fluid py-5 px-5" id="blogs">
 			<div class="row">
@@ -563,7 +368,7 @@
 						<a
 							class="btn btn-outline-primary rounded-pill rd-al-artcls blog-btn my-4"
 							type="button"
-							href="el-nido-blog.html"
+							href="el-nido-blog.php"
 							target="_blank"
 						>
 							Read more <i class="bi bi-arrow-right fs-4"></i>
@@ -605,7 +410,7 @@
 						<a
 							class="btn btn-outline-primary rounded-pill rd-al-artcls blog-btn my-4"
 							type="button"
-							href="coron-blog.html"
+							href="coron-blog.php"
 							target="_blank"
 						>
 							Read more <i class="bi bi-arrow-right fs-4"></i>
@@ -647,7 +452,7 @@
 						<a
 							class="btn btn-outline-primary rounded-pill rd-al-artcls blog-btn my-4"
 							type="button"
-							href="puerto-princesa-blog.html"
+							href="puerto-princesa-blog.php"
 							target="_blank"
 						>
 							Read more <i class="bi bi-arrow-right fs-4"></i>
@@ -685,7 +490,7 @@
 						<a
 							class="btn btn-outline-primary rounded-pill rd-al-artcls blog-btn my-4"
 							type="button"
-							href="balabac-blog.html"
+							href="balabac-blog.php"
 							target="_blank"
 						>
 							Read more <i class="bi bi-arrow-right fs-4"></i>
@@ -733,11 +538,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“I had an amazing time exploring Palawan. Everything felt calm and refreshing. I would definitely come back again.”
@@ -759,11 +566,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-half fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“The trip was very organized from start to finish. The guides were friendly and very helpful. I loved every moment.”
@@ -785,11 +594,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“Such a beautiful experience. The beaches were stunning and peaceful. Truly worth the visit.”
@@ -811,11 +622,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“I enjoyed every part of the island tour. The staff were kind and professional. Highly recommended.”
@@ -837,11 +650,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“Great value for the experience. Everything was well-planned and smooth. I’ll be recommending this to my friends.”
@@ -863,11 +678,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“The entire trip felt magical. The views were breathtaking, and the service was excellent. I couldn’t ask for more.”
@@ -893,11 +710,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“I had an amazing time exploring Palawan. Everything felt calm and refreshing. I would definitely come back again.”
@@ -919,11 +738,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-half fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“The trip was very organized from start to finish. The guides were friendly and very helpful. I loved every moment.”
@@ -945,11 +766,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“Such a beautiful experience. The beaches were stunning and peaceful. Truly worth the visit.”
@@ -971,11 +794,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“I enjoyed every part of the island tour. The staff were kind and professional. Highly recommended.”
@@ -997,11 +822,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“Great value for the experience. Everything was well-planned and smooth. I’ll be recommending this to my friends.”
@@ -1023,11 +850,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“The entire trip felt magical. The views were breathtaking, and the service was excellent. I couldn’t ask for more.”
@@ -1061,11 +890,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“The entire trip felt magical. The views were breathtaking, and the service was excellent. I couldn’t ask for more.”
@@ -1087,10 +918,12 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“I loved the peaceful atmosphere. Every spot we visited felt like a postcard. Truly unforgettable.”
@@ -1112,11 +945,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“Everything exceeded my expectations. The guides were very knowledgeable. I felt safe the whole time.”
@@ -1138,11 +973,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“Such an awesome trip. The scenery was unreal, and the water was crystal clear. Perfect for nature lovers.”
@@ -1164,11 +1001,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“It was one of the best vacations I’ve ever had. The food, the views, the people—perfect. I will definitely recommend this.”
@@ -1190,11 +1029,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“The experience was smooth and stress-free. The staff made sure everything was comfortable. I really enjoyed the tour.”
@@ -1218,11 +1059,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“The entire trip felt magical. The views were breathtaking, and the service was excellent. I couldn’t ask for more.”
@@ -1244,10 +1087,12 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“I loved the peaceful atmosphere. Every spot we visited felt like a postcard. Truly unforgettable.”
@@ -1269,11 +1114,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“Everything exceeded my expectations. The guides were very knowledgeable. I felt safe the whole time.”
@@ -1295,11 +1142,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“Such an awesome trip. The scenery was unreal, and the water was crystal clear. Perfect for nature lovers.”
@@ -1321,11 +1170,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“It was one of the best vacations I’ve ever had. The food, the views, the people—perfect. I will definitely recommend this.”
@@ -1347,11 +1198,13 @@
 							<div class="card testimonial-card position-relative">
 								<div class="card-body marquee-first">
 
+                                    <div class="stars">
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
 									<i class="bi bi-star-fill fs-5 text-warning"></i>
+                                    </div>
 
 									<p class="card-text mt-2">
 										“The experience was smooth and stress-free. The staff made sure everything was comfortable. I really enjoyed the tour.”
@@ -1416,113 +1269,9 @@
 
 
 
+        <?php include 'footer.php'; ?>
 
-
-
-
-
-
-
-
-
-		<div class="footer-wrapper rounded-4 my-3">
-
-			<div class="newsletter-card rounded-top-4">
-				<div class="row align-items-center mx-2 newsletter-text-main">
-					<div class="col-md-6 newsletter-text pe-md-5	">
-					<h3 class="newsletter-title">Subscribe To Our Newsletter</h3>
-					<p class="newsletter-desc mb-0 newsletter-sub">
-						Sign up today for exclusive travel tips, upcoming tour announcements, and hidden gems to inspire your next adventure.
-					</p>
-				</div>
-
-					<div class="col-md-6 ps-md-5">
-						<form action="#">
-							<div class="newsletter-input-wrapper">
-								<input type="email" placeholder="Enter email address" required>
-								<button type="submit" class="newsletter-btn">Get Listed</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<footer class="pt-5">
-				<div class="container-fluid">
-					<div class="row align-items-start mx-4">
-						<div class="col-12 col-md-auto mb-3">
-							<a class="header-title text-dark text-decoration-none">
-                      <span class="fs-4">
-                          <span class="pala">PALA</span>
-                          <span class="wonder">WANDER</span>
-                      </span>
-							</a>
-							<p class="footer-p">
-								A place where nature and adventure unite
-							</p>
-						</div>
-
-						<div class="col-12 col-md-7 ms-md-auto mb-3">
-							<div class="container-fluid px-0">
-								<div class="row g-5 justify-content-end">
-									<div class="col-4 col-md-auto">
-										<h5 class="footer-h5">About Us</h5>
-										<ul class="nav flex-column">
-											<li class="nav-item mb-2">
-												<a href="#" class="nav-link p-0 text-body-secondary footer-li">Our guides</a>
-											</li>
-											<li class="nav-item mb-2">
-												<a href="#" class="nav-link p-0 text-body-secondary footer-li">Blogs</a>
-											</li>
-											<li class="nav-item mb-2">
-												<a href="#" class="nav-link p-0 text-body-secondary footer-li">Contact us</a>
-											</li>
-										</ul>
-									</div>
-
-									<div class="col-4 col-md-auto">
-										<h5 class="footer-h5">FAQs</h5>
-										<ul class="nav flex-column">
-											<li class="nav-item mb-2">
-												<a href="#" class="nav-link p-0 text-body-secondary footer-li">Personal trip</a>
-											</li>
-											<li class="nav-item mb-2">
-												<a href="#" class="nav-link p-0 text-body-secondary footer-li">Group trip</a>
-											</li>
-											<li class="nav-item mb-2">
-												<a href="#" class="nav-link p-0 text-body-secondary footer-li">Tour payment</a>
-											</li>
-										</ul>
-									</div>
-
-									<div class="col-4 col-md-auto">
-										<h5 class="footer-h5">
-											Further Information
-										</h5>
-										<ul class="nav flex-column">
-											<li class="nav-item mb-2">
-												<a href="#" class="nav-link p-0 text-body-secondary footer-li">Term of use</a>
-											</li>
-											<li class="nav-item mb-2">
-												<a href="#" class="nav-link p-0 text-body-secondary footer-li">Health & safety</a>
-											</li>
-											<li class="nav-item mb-2">
-												<a href="#" class="nav-link p-0 text-body-secondary footer-li">Privacy policy</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="border-top-dark my-3 pt-3">
-							<p class="my-1 footer-low-p">@2025 Imus, Cavite</p>
-						</div>
-					</div>
-				</div>
-			</footer>
-		</div>
-
-		<script src="assets/scripts/toggle-cards.js"></script>
+		<script src="assets/scripts/left-and-right-btn.js"></script>
 		<script src="assets/scripts/typewriter-animation.js"></script>
 		<script defer src="assets/scripts/activePage.js"></script>
 		<script

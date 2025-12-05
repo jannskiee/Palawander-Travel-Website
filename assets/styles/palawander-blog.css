@@ -1,0 +1,30 @@
+h1 {
+    font-family: 'Cina Geo', sans-serif;
+    font-weight: 600;
+}
+
+.blog-text p {
+    font-family: 'Cina Geo', sans-serif;
+    font-weight: 300;
+    font-size: 1.15rem;       /* Slightly larger text for easier reading */
+    line-height: 1.8;         /* More breathing room between lines */
+    color: #333;              /* Dark grey instead of black is softer on the eyes */
+    margin-bottom: 1.5rem;    /* Space between paragraphs */
+    text-align: justify;      /* Makes the text edges look clean */
+}
+
+/* Optional: Add a subtle animation to the image on load */
+img {
+    transition: transform 0.3s ease;
+}
+
+.blog-btn {
+    color: black !important;
+    border-color: black !important;
+}
+
+.blog-btn:hover {
+    border-color: black !important;
+    background-color: black !important;
+    color: white !important;
+}

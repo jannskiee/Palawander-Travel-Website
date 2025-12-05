@@ -1,121 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>El Nido</title>
-	<link href="assets/styles/el-nido-blog.css" rel="stylesheet" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body>
-<div class="container-fluid px-0 py-2 sticky-top rounded-bottom-4">
-	<header>
-		<div class="container-fluid px-0">
-			<div class="row align-items-center">
-				<!-- LEFT: PALAWANDER -->
-				<div class="col-6 col-md-4">
-					<a
-						class="header-title text-dark text-decoration-none"
-					>
-								<span class="fs-4">
-									<span class="pala">PALA</span
-									><span class="wonder">WANDER</span>
-								</span>
-					</a>
-				</div>
-
-				<!-- CENTER NAV (MD+) -->
-				<div
-					class="col-md-4 text-center d-none d-md-flex justify-content-center"
-				>
-					<nav>
-						<ul class="nav nav-pills flex-nowrap">
-							<li class="nav-item">
-								<a class="nav-link text-nowrap hover-underline-animation left" href="#home"
-								>Home</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link text-nowrap hover-underline-animation left" href="#tour"
-								>Our Tours</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link text-nowrap hover-underline-animation left" href="#blogs"
-								>Blogs</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link text-nowrap hover-underline-animation left" href="bookings-page.html"
-								>Bookings</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link text-nowrap hover-underline-animation left" href="faqs-page.html"
-								>FAQs</a
-								>
-							</li>
-						</ul>
-					</nav>
-				</div>
-
-				<!-- RIGHT: DROPDOWN -->
-				<div class="col-6 col-md-4 text-end">
-					<div class="dropdown">
-						<button
-							class="btn"
-							data-bs-toggle="dropdown"
-							type="button"
-						>
-							<i class="bi bi-list fs-3"></i>
-						</button>
-
-						<!-- MENU: Only visible on SM -->
-						<ul
-							class="dropdown-menu dropdown-menu-end d-md-none"
-						>
-							<li>
-								<a class="dropdown-item" href="#home"
-								>Home</a
-								>
-							</li>
-							<li>
-								<a class="dropdown-item" href="#tour"
-								>Our Tours</a
-								>
-							</li>
-							<li>
-								<a class="dropdown-item" href="#blogs"
-								>Blogs</a
-								>
-							</li>
-							<li>
-								<a class="dropdown-item" href="#"
-								>Bookings</a
-								>
-							</li>
-							<li>
-								<a class="dropdown-item" href="#"
-								>FAQs</a
-								>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-</div>
-
-
-
-
-
-
-
-
-
-
 <div class="footer-wrapper rounded-4 my-3">
 
 	<div class="newsletter-card rounded-top-4">
@@ -205,7 +87,7 @@
 					</div>
 				</div>
 
-				<div class="border-top-dark my-3 pt-3">
+				<div class="border-top-dark my-3">
 					<p class="my-1 footer-low-p">@2025 Imus, Cavite</p>
 				</div>
 			</div>
@@ -213,6 +95,3 @@
 	</footer>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-</html>

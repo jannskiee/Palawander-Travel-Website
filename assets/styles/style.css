@@ -16,23 +16,14 @@
 	}
 }
 
-@keyframes marquee-first {
-	0% {
-		transform: translateX(-50%);
-	}
-	100% {
-		transform: translateX(0%);
-	}
+@keyframes marquee-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Assumes content is duplicated */
 }
 
-
-@keyframes marquee-second {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(-50%);
-	}
+@keyframes marquee-right {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
 }
 
 @font-face {
@@ -70,45 +61,180 @@
 	font-style: normal;
 }
 
-#home, #tour, #cards-blogs {
-	scroll-margin-top: 76px;
+/* =========================================
+   GLOBAL MOBILE SPACING FIX
+   (Applies to phones max-width 576px)
+   ========================================= */
+/* =========================================
+   FINAL MOBILE OVERRIDES (Place at very bottom of CSS)
+   ========================================= */
+
+/* 1. Override the Body Padding */
+
+    /* Optional: Ensure containers don't add double padding */
+
+/* ... existing code above ... */
+
+/* =========================================
+   MOBILE & TABLET OPTIMIZATIONS
+   (These rules only apply to screens smaller than 992px)
+   ========================================= */
+
+@media (max-width: 992px) {
+    /* TABLETS: Make the text container wider so it doesn't wrap too much */
+    .carousel-fixed-text {
+        width: 85%;
+    }
+
+    .crsl-h1 {
+        font-size: 65px;
+        line-height: 1.1;
+    }
 }
 
-#blogs {
-	scroll-margin-top: 60px;
+/* ▼▼▼▼▼ THIS IS THE SECTION WE ARE CHANGING ▼▼▼▼▼ */
+@media (max-width: 768px) {
+    /* PHONES: Adjust height and text width */
 
+    .first-section {
+        /* --- CHANGE START --- */
+        /* Formerly 85vh. Reduced to 60vh for a better mobile look. */
+        height: 60vh !important;
+        /* Formerly 500px. Reduced min-height to match the new shorter height. */
+        min-height: 400px;
+        /* --- CHANGE END --- */
+    }
+
+    .carousel-fixed-text {
+        width: 95%;
+    }
+    /* ▲▲▲▲▲ END OF CHANGES ▲▲▲▲▲ */
+
+
+    .crsl-h1 {
+        font-size: 42px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .crsl-p {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .crsl-btn {
+        width: 150px;
+        font-size: 14px;
+        padding: 10px 0;
+    }
 }
+
+/* ... rest of your CSS remains the same ... */
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS (Mobile & Tablet)
+   These rules only trigger on smaller screens
+   ========================================= */
+
+/* Tablet and below (max-width: 992px) */
+@media (max-width: 992px) {
+    body {
+        /* Reduce the heavy side padding from desktop */
+        padding: 0 30px !important;
+    }
+
+    .tours-h1 {
+        font-size: 42px; /* Slightly smaller heading */
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+        /* Standard mobile padding to prevent squishing */
+        padding: 0 20px !important;
+    }
+
+    /* Adjust the main section Title */
+    .tours-h1 {
+        font-size: 36px !important;
+        margin-top: 20px;
+    }
+
+    .tours-p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* Fix the fixed width on the paragraph below icons */
+    .tours-h5-p {
+        width: 100%; /* Override the fixed 200px width */
+        padding: 0 5px; /* Prevent text touching edges */
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    /* Adjust the icons size if they feel too big on phone */
+    .circle-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .tours-h5 {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+}
+
+/* ... existing CSS ... */
+
+    /* ... your existing mobile styles ... */
+
+    /* -------------------------------------------
+       MOBILE HORIZONTAL SCROLL FOR TOURS
+    ------------------------------------------- */
+
+    /* 1. Turn the Grid Row into a Scrollable Flex Container */
+.mobile-scroll-row {
+    display: flex !important;
+    flex-wrap: nowrap !important; /* Prevents wrapping to next line */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Forces cards to snap into place */
+    gap: 15px; /* Space between cards */
+    padding-bottom: 20px; /* Space for shadow so it doesn't get cut off */
+
+    /* Remove default bootstrap margin issues on mobile */
+    margin-right: -20px !important;
+    margin-left: -20px !important;
+    padding-left: 20px; /* visual padding start */
+    padding-right: 20px; /* visual padding end */
+
+    /* Smooth scrolling for iOS */
+    -webkit-overflow-scrolling: touch;
+
+    /* Hide Scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+/* Hide Chrome/Safari/Webkit scrollbar */
+.mobile-scroll-row::-webkit-scrollbar {
+    display: none;
+}
+
+/* 2. Fix the Columns (Cards) width */
+.mobile-scroll-row .col {
+    flex: 0 0 85%; /* Make card take 85% of screen width */
+    max-width: 85%;
+    scroll-snap-align: center; /* Card snaps to center of screen */
+}
+
 
 body {
 	background-color: var(--white-color);
 	padding: 0 50px !important;
 	margin: 0;
-}
-
-.pala {
-	font-family: "Cina Geo", sans-serif; /* elegant serif font */
-	font-weight: 300;
-}
-
-.wonder {
-	font-family: "Cina Geo", sans-serif; /* modern sans-serif font */
-	font-weight: 700;
-}
-
-.nav-link {
-	color: black !important;
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
-	transition: color 0.3s;
-}
-
-.nav-pills .nav-link:hover {
-	color: gray !important;
-	background-color: transparent !important;
-}
-
-.dropdown .btn {
-	padding-right: 0px;
 }
 
 .first-section {
@@ -283,13 +409,17 @@ body {
 }
 
 .tours-h5-p {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 300;
-	font-size: 14px;
-	width: 200px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+
+    /* CHANGE HERE */
+    width: 100%;       /* Allow it to shrink if the screen is small */
+    max-width: 200px;  /* Keep it neat on big screens */
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .circle-icon {
@@ -381,7 +511,7 @@ body {
 
 
 .card-body {
-	padding-bottom: 60px; /* adds space so price doesn’t overlap text */
+	padding-bottom: 10px; /* adds space so price doesn’t overlap text */
 }
 .card-price:hover {
 	transform: translateY(-8px); /* lift up slightly */
@@ -527,20 +657,28 @@ body {
 }
 
 .rd-al-artcls {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-	text-align: center; /* optional, keeps text inside button centered */
-	width: 20%; /* keeps button small */
-	display: block;
-	margin: 0; /* remove auto centering */
-	color: black;
-	border-color: black;
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+
+    /* FIX: Stop using 20%. Use auto width with padding */
+    display: inline-block; /* Allows button to hug the text */
+    width: auto;           /* Let width be determined by text length */
+    min-width: 200px;      /* Ensures it doesn't get too small */
+    padding: 10px 30px;    /* Adds breathing room inside the button */
+
+    margin: 0;
+    color: black;
+    border-color: black;
+    white-space: nowrap;   /* Prevents text from breaking into 2 lines */
+    transition: all 0.3s ease;
 }
 
 .rd-al-artcls:hover {
-	background-color: black !important;
-	color: white !important;
+    background-color: black !important;
+    color: white !important;
+    transform: translateY(-2px); /* Optional: Adds a tiny lift effect */
 }
 
 .blogs-h5 {
@@ -570,147 +708,6 @@ body {
 	font-size: 16px;
 }
 
-.sticky-top {
-	background-color: var(--white-color);
-}
-
-.footer-p {
-    font-family: "Cina Geo", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    width: 70%;
-}
-
-.footer-h5 {
-    font-family: "Cina Geo", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.footer-li {
-    font-family: "Cina Geo", sans-serif;
-    font-weight: 300;
-    font-size: 14px;
-    color: #393939 !important;
-}
-
-.footer-wrapper {
-     /* This background applies to the bottom part (the links) */
-     background-color: #f9f9f9;
-     border: 1px solid #e0e0e0;
-     /* Crucial: clips the inner white card to these rounded corners */
-     overflow: hidden;
- }
-
-/* --- NEWSLETTER CARD (White Section) --- */
-.newsletter-card {
-    background-color: #ffffff;
-    padding: 3rem 2rem;
-    /* The "Connection" line */
-    border: 1px solid #e0e0e0;
-}
-
-.newsletter-title {
-    font-family: "Cina Geo", sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    color: #000;
-    margin-bottom: 10px;
-
-    max-width: 400px; /* Keeps the text block narrow */
-
-    /* THIS PUSHES THE BLOCK TO THE RIGHT */
-    margin-left: auto;
-    margin-right: 0;
-    text-align: left;
-}
-
-.newsletter-desc {
-    font-family: "Cina Geo", sans-serif;
-    font-weight: 300;
-    font-size: 14px;
-    color: #6c757d;
-
-    max-width: 400px; /* Keeps the text block narrow */
-
-    /* THIS PUSHES THE BLOCK TO THE RIGHT */
-    margin-left: auto;
-    margin-right: 0;
-}
-
-.newsletter-sub {
-    text-align: left;
-}
-
-/* --- INPUT PILL DESIGN --- */
-.newsletter-input-wrapper {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 50px;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 450px;
-
-    /* CHANGE: Align to the left side now */
-    margin-right: auto;
-    margin-left: 0;
-
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
-}
-
-.newsletter-input-wrapper input {
-    border: none;
-    background: transparent;
-    padding: 10px 20px;
-    width: 100%;
-    outline: none;
-    font-size: 14px;
-    color: #333;
-}
-
-.newsletter-input-wrapper input::placeholder {
-    color: #aaa;
-}
-
-
-.newsletter-btn {
-    background-color: #000; /* specific color fallback */
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 10px 25px;
-    font-weight: 500;
-    font-size: 14px;
-    white-space: nowrap;
-    transition: background 0.3s;
-}
-
-.newsletter-btn:hover {
-    background-color: #333;
-}
-
-/* --- FOOTER TYPOGRAPHY --- */
-.footer-p {
-    font-family: "Cina Geo", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    width: 70%;
-}
-
-.footer-h5 {
-    font-family: "Cina Geo", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.footer-li {
-    font-family: "Cina Geo", sans-serif;
-    font-weight: 300;
-    font-size: 14px;
-    color: #393939 !important;
-}
 
 @media (max-width: 768px) {
     .newsletter-input-wrapper {
@@ -732,74 +729,107 @@ body {
 	color: white !important;
 }
 
-.footer-low-p{
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 300;
-	font-size: 12px;
-	color: #737373;
-}
-
 .blog-btn {
-	position: absolute;
-	bottom: 0px; /* Increase distance from the bottom */
-	right: 20px;  /* Optional: Increase distance from the right */
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding: 3px 14px; /* Adjust padding for smaller height */
-	font-size: 1rem; /* Keep same font size */
+    /* 1. Reset Position: Ensures it sits BELOW content, never overlaps */
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+
+    /* 2. Internal Alignment (Fixes the icon/text mismatch) */
+    display: inline-flex !important; /* aligned side-by-side */
+    align-items: center !important;  /* vertical center */
+    justify-content: center;         /* horizontal center */
+    gap: 8px;                        /* space between text and arrow */
+    margin-right: 20px !important;
+
+    /* 3. Styling */
+    white-space: nowrap;
+    border: 1px solid black;
+    color: black;
+    transition: all 0.3s ease;
+    text-decoration: none; /* removes underline */
 }
 
+/* Fix for the Icon specifically to ensure it doesn't jump up/down */
 .blog-btn i {
-	margin-left: 5px;
+    margin: 0 !important; /* Reset existing margins */
+    line-height: 1 !important; /* Removes extra height causing offset */
+    display: flex; /* Helps it behave for alignment */
 }
 
 .blog-btn:hover {
-	background-color: black !important;
-	color: white !important;
+    background-color: black !important;
+    color: white !important;
 }
 
 .marquee-container {
-	overflow: hidden;
-	width: 100%;
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hides the scrollbar, keeps content inside */
+    padding: 10px 0;
+
+    /* Optional: Fades the left and right edges for a premium look */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
+.marquee-track-first,
+.marquee-track-second {
+    display: flex;
+    gap: 30px; /* Space between cards */
+    width: max-content; /* Forces content to be as wide as needed */
+}
+
+/* 2. ANIMATIONS */
 .marquee-track-first {
-	display: flex;
-	gap: 1.5rem;
-	width: max-content;
-	animation: marquee-first 20s linear infinite;
+    animation: marquee-left 45s linear infinite;
 }
 
 .marquee-track-second {
-	display: flex;
-	gap: 1.5rem;
-	width: max-content;
-	animation: marquee-second 20s linear infinite;
+    animation: marquee-right 45s linear infinite;
 }
 
 .marquee-first {
-	flex: 0 0 auto;
-	width: 24rem;
-	height: 14rem;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important; /* Forces it to fill the card height */
 }
 
+.card-item {
+    flex: 0 0 auto; /* Prevents cards from shrinking */
+    width: 400px;   /* Fixed width for Desktop */
+}
+
+.testimonial-card {
+    border: none;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    height: 100%; /* Ensures all cards in a row are same height */
+    padding: 15px;
+}
 
 .testimonial-p {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 300;
-	font-size: 16px;
-	width: 50%;       /* keeps the text narrower */
-	margin: 0 auto;   /* centers the paragraph */
-	text-align: center; /* centers text inside the paragraph */
-	color: #393939 !important;
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
 }
 
-
 .profile-section {
-	position: absolute;
-	bottom: 20px;
-	left: 20px;
+    /* Stop it from floating over text */
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    /* "Auto" margin pushes it to the bottom of the flex container,
+       but keeps it strictly BELOW the text. */
+    margin-top: auto !important;
+
+    /* Add breathing room between text and profile */
+    padding-top: 15px !important;
 }
 
 .profile-img {
@@ -822,31 +852,569 @@ body {
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.hover-underline-animation {
-	display: inline-block;
-	position: relative;
+/* --- SCROLL CONTAINER --- */
+.tour-carousel-wrapper {
+    width: 100%;
+    /* Add padding left/right to align with container-fluid on large screens */
+    padding: 0 0;
 }
 
-.hover-underline-animation::after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	transform: scaleX(0);
-	height: 2px;
-	bottom: 0;
-	left: 0;
-	background-color: black;
-	transition: transform 0.25s ease-out;
+.tours-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 30px; /* Space between cards */
+    padding: 20px 50px 40px 50px; /* Top, Right, Bottom, Left */
+
+    /* Hide scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE */
 }
 
-.hover-underline-animation:hover::after {
-	transform: scaleX(1);
+/* Hide webkit scrollbar */
+.tours-scroll-container::-webkit-scrollbar {
+    display: none;
 }
 
-.hover-underline-animation.left::after {
-	transform-origin: bottom left;
+/* --- FIXED CARD SIZING --- */
+.tour-card-fixed {
+    /* Prevent Flex shrinking/growing */
+    flex: 0 0 auto;
+
+    /* FIXED WIDTH for all screens */
+    width: 340px;
 }
 
-.hover-underline-animation.left:hover::after {
-	transform-origin: bottom left;
+.card-tour {
+    /* FIXED HEIGHT for all screens */
+    height: 540px !important;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Subtle shadow */
 }
+
+.card-tour .card-body {
+    flex: 1; /* Pushes content to fill space */
+}
+
+/* --- NAVIGATION BUTTONS (Left/Right) --- */
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--black-color);
+    font-size: 1.2rem;
+}
+
+.scroll-arrow:hover {
+    background-color: var(--black-color);
+    color: white;
+    border-color: var(--black-color);
+}
+
+.scroll-left {
+    left: 20px; /* Position from left edge */
+}
+
+.scroll-right {
+    right: 20px; /* Position from right edge */
+}
+
+/* --- RESPONSIVENESS --- */
+
+/* For Tablets and Small Laptops */
+@media (max-width: 992px) {
+    .tour-card-fixed {
+        width: 300px; /* Slightly narrower cards */
+    }
+    .card-tour {
+        height: 500px !important;
+    }
+}
+
+/* For Mobile Phones */
+@media (max-width: 768px) {
+    .tours-scroll-container {
+        padding: 10px 20px 30px 20px; /* Less side padding on phone */
+        gap: 15px;
+        scroll-snap-type: x mandatory; /* Snap effect on touch */
+    }
+
+    .tour-card-fixed {
+        width: 85vw; /* Card takes 85% of screen width */
+        max-width: 320px;
+        scroll-snap-align: center;
+    }
+
+    /* Buttons are hidden via d-none d-md-flex class in HTML,
+       so no extra CSS needed here */
+}
+
+/* =========================================
+   MOBILE CARD SIZING (Small Screens)
+   (Applies to phones max-width 576px)
+   ========================================= */
+/* =========================================
+   COMPACT MOBILE CARD SIZING
+   (Applies to phones max-width 576px)
+   ========================================= */
+/* =========================================
+   COMPACT MOBILE CARD SIZING (FIXED)
+   (Applies to phones max-width 576px)
+   ========================================= */
+/* =========================================
+   COMPACT MOBILE CARD SIZING (UPDATED)
+   (Applies to phones max-width 576px)
+   ========================================= */
+@media (max-width: 576px) {
+    /* 1. NARROWER WIDTH */
+    .tour-card-fixed {
+        width: 250px !important; /* Slightly wider to accommodate bigger text */
+    }
+
+    /* 2. SHORTER HEIGHT */
+    .card-tour {
+        min-height: 0 !important; /* Reset global min-height */
+        height: 360px !important; /* Slightly taller for text breathing room */
+    }
+
+    /* 3. IMAGE HEIGHT */
+    .card-tour .card-img-top {
+        height: 140px;
+    }
+
+    /* 4. TEXT ADJUSTMENTS (Bigger & Clearer) */
+    .card-tour .card-body {
+        padding: 14px; /* More padding for cleaner look */
+    }
+
+    .card-tour .card-round {
+        font-size: 11px; /* Increased from 10px */
+        margin-bottom: 4px;
+    }
+
+    .card-tour .card-title {
+        font-size: 18px; /* Increased from 16px */
+        margin-bottom: 6px;
+        line-height: 1.2;
+    }
+
+    .card-tour .card-text {
+        font-size: 13.5px; /* Increased from 12px */
+        line-height: 1.35;
+        color: #555; /* Slightly darker for readability */
+
+        /* Cut off text after 3 lines */
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+
+    /* 5. PRICE SECTION */
+    .price-container {
+        bottom: 12px;
+        left: 14px;
+    }
+
+    .card-tour .price-text {
+        font-size: 0.75rem;
+    }
+
+    .card-tour .price-tag {
+        font-size: 1.15rem;
+    }
+
+    /* 6. BUTTON CENTERING FIX */
+    .card-tour .card-btn {
+        width: 38px;
+        height: 38px;
+        bottom: 12px;
+        right: 12px;
+
+        /* THE FIX: Use Flexbox to center the icon perfectly */
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important; /* Remove any default Bootstrap padding */
+    }
+
+    .card-tour .card-btn i {
+        font-size: 1.1rem !important;
+        /* Remove line-height or margin that might offset it */
+        line-height: 0;
+        margin: 0;
+    }
+}
+
+/* =========================================
+   BLOGS SECTION RESPONSIVENESS
+   Targeting ID #blogs and classes inside
+   ========================================= */
+
+/* --- TABLETS (Between 768px and 992px) --- */
+@media (max-width: 992px) {
+    /* Reduce the heavy padding (px-5) from the container */
+    #blogs {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    /* Slightly smaller title */
+    .blogs-h5 {
+        font-size: 42px;
+    }
+
+    /* Make button wider on tablet (was 20%) */
+    .rd-al-artcls {
+        width: 40%;
+    }
+}
+
+/* --- MOBILE LANDSCAPE / LARGE PHONES (Below 768px) --- */
+@media (max-width: 768px) {
+    #blogs {
+        padding: 40px 20px !important;
+    }
+
+    .blogs-h5 {
+        font-size: 36px; /* Much smaller for mobile readability */
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+
+    .blogs-p {
+        font-size: 15px;
+        text-align: left; /* 'Justify' looks bad on narrow mobile columns */
+        line-height: 1.6;
+    }
+
+    /* Make the button fit the content or fixed width */
+    .rd-al-artcls {
+        width: 200px; /* Fixed pixel width for touch target */
+        margin-top: 10px;
+        margin-bottom: 30px; /* Add space below button */
+    }
+}
+
+/* --- SMALL PHONES (Below 576px) --- */
+@media (max-width: 576px) {
+    /* Minimal padding to maximize screen real estate */
+    #blogs {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .blogs-h5 {
+        font-size: 32px;
+    }
+
+    .blogs-p {
+        font-size: 14px;
+    }
+
+    /* Make button full width for easy thumb tapping */
+    .rd-al-artcls {
+        width: 100%;
+        padding: 12px 0; /* Taller button for easier clicking */
+    }
+}
+
+
+@media (min-width: 768px) {
+    .blog-btn {
+        /* Makes the button act like a block so we can push it right */
+        display: flex !important;
+        width: fit-content; /* wraps around the text tightly */
+
+        /* Pushes button to the Right */
+        margin-left: auto;
+        margin-right: 0;
+
+        /* Spacing from the content above */
+        margin-top: 30px;
+
+        padding: 8px 30px;
+    }
+}
+
+/* --- MOBILE PHONE (SM, XS) --- */
+/* Centered, Top spacing added */
+/* --- MOBILE PHONE (SM, XS) --- */
+/* Centered, Top spacing added */
+/* --- MOBILE PHONE (SM, XS) --- */
+/* Centered Horizontally AND Vertically */
+@media (max-width: 767px) {
+    .blog-btn {
+        /* 1. Layout & Sizing */
+        /* Use inline-flex to keep text & icon aligned and fit width to content */
+        display: inline-flex !important;
+        width: fit-content !important;
+
+        /* 2. HORIZONTAL CENTERING */
+        /* Use auto margins to center horizontally.
+           Must use !important to override global margin-right. */
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        /* 3. VERTICAL CENTERING (Visual) */
+        /* Apply equal margins above and below to center it vertically into space */
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+
+        /* 4. Alignment Safety Net */
+        /* Ensures it aligns center in the flex parent (the card) */
+        align-self: center !important;
+
+        /* 5. Larger touch target for mobile */
+        padding: 12px 40px !important;
+    }
+
+    /* Ensure space between text and icon */
+    .blog-btn i {
+        margin-left: 8px !important;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .card-item {
+        width: 340px; /* Slightly narrower cards */
+    }
+
+    .testimonial-p {
+        width: 80%; /* Allow header text to take more space */
+    }
+}
+
+/* --- MOBILE (Below 768px) --- */
+@media (max-width: 768px) {
+
+    .marquee-first {
+        /* 1. Override the fixed 24rem width */
+        width: 100% !important;
+
+        /* 2. Remove fixed height so text doesn't get cut off vertically */
+        height: auto !important;
+
+        /* 3. Ensure text wraps normally */
+        white-space: normal !important;
+
+        /* 4. Reset Flex shrinking */
+        flex: 1 1 auto !important;
+    }
+
+    /* Optional: If text touches the edges too much */
+    .card-text {
+        padding-right: 5px;
+    }
+    /* 1. Adjust the Header */
+    .tours-h1 {
+        font-size: 36px; /* Smaller Title */
+    }
+
+    .testimonial-p {
+        width: 100%; /* Full width text */
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    /* 2. Resize the Marquee Cards */
+    .card-item {
+        width: 280px; /* Much narrower to fit phone screens nicely */
+    }
+
+    .testimonial-card {
+        padding: 10px; /* Less internal padding */
+    }
+
+    /* 3. Adjust Text inside Cards */
+    .card-text {
+        font-size: 14px; /* Smaller quote text */
+        line-height: 1.4;
+    }
+
+    .profile-role {
+        font-size: 11px; /* Smaller role text */
+    }
+
+    .profile-img {
+        width: 35px; /* Slightly smaller avatar */
+        height: 35px;
+    }
+
+    /* 4. Speed up animation slightly on mobile (optional, feels more dynamic) */
+    .marquee-track-first {
+        animation-duration: 30s;
+    }
+    .marquee-track-second {
+        animation-duration: 30s;
+    }
+}
+
+/* --- SMALL MOBILE (Below 400px) --- */
+@media (max-width: 400px) {
+    .card-item {
+        width: 250px; /* Very narrow for small devices like iPhone SE */
+    }
+}
+
+/* =========================================
+   "LET'S GET TO KNOW PALAWAN" RESPONSIVENESS
+   ========================================= */
+
+/* --- TABLETS (Between 768px and 992px) --- */
+@media (max-width: 992px) {
+    .card-end-h5 {
+        font-size: 50px; /* Reduce from 70px */
+        width: 90%;      /* Allow text to use more width */
+    }
+
+    .card-end-img {
+        /* Increase height slightly so text has room to breathe */
+        height: 35vh !important;
+    }
+}
+
+/* --- MOBILE PHONES (Below 768px) --- */
+@media (max-width: 768px) {
+    /* 1. Container Height */
+    .card-end-img {
+        /* Switch from viewport height (vh) to a fixed min-height
+           so content doesn't get cut off on small screens */
+        height: auto !important;
+        min-height: 400px;
+    }
+
+    /* 2. Text Sizing */
+    .card-end-h5 {
+        font-size: 32px;     /* Much smaller for readability */
+        width: 100%;         /* Use full width */
+        line-height: 1.2;    /* Tighten line spacing */
+        margin-bottom: 25px; /* Space between text and button */
+        padding: 0 10px;     /* Prevent text touching screen edges */
+    }
+
+    /* 3. Button Adjustments */
+    .card-end-text .crsl-btn {
+        width: 160px;        /* Fixed comfortable width */
+        font-size: 14px;
+        padding: 12px 0;
+    }
+
+    /* 4. Ensure Overlay centers correctly */
+    .card-end-text {
+        /* Re-enforce centering just in case */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .card-know .card-img {
+        height: 350px !important;
+    }
+}
+
+/* 3. MOBILE PHONES */
+/* Small enough to see content, tall enough to cover text */
+@media (max-width: 768px) {
+    .card-know .card-img {
+        height: 300px !important;
+    }
+
+    /* Ensure the container matches the image height */
+    .card-know {
+        height: auto !important;
+        min-height: 300px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Target the specific container holding the card */
+    .container-fluid.px-5 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* 1. Target the Card Container */
+    .card-know {
+        /* Allow height to grow if text is long */
+        height: auto !important;
+        min-height: 300px !important;
+
+        /* THE FIX: Remove the gray background color entirely */
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    /* 2. Target the Image inside */
+    .card-know .card-img {
+        /* Force image to be at least as tall as the container */
+        min-height: 100% !important;
+        height: auto !important;
+
+        /* Ensure it covers the area without distorting */
+        object-fit: cover;
+    }
+}
+
+/* --- MOBILE PHONES --- */
+@media (max-width: 768px) {
+    .card-know {
+        /* 1. Set a fixed height that fits all text */
+        height: 400px !important;
+
+        /* 2. Remove background color */
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .card-know .card-img {
+        /* 3. Force image to fill the 450px height completely */
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important; /* Ensure no stretching */
+    }
+}
+
+.card-know {
+    /* Remove the color causing the gray bar */
+    background-color: transparent !important;
+    border: none !important;
+
+    /* Default Desktop Height */
+    height: 400px;
+    overflow: hidden; /* Clips corners */
+}
+
+/* Force image to fill the container completely */
+.card-know .card-img {
+    height: 100% !important; /* Fill parent height */
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================================
+   FIX GRAY BAR ON MOBILE
+   ========================================= */
+

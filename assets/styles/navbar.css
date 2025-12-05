@@ -16,6 +16,13 @@
 }
 
 /* Semi-Bold */
+:root {
+    --black-color: #1a1e18;
+    --white-color: #ffffff;
+    --gray-color: #f4f4f4;
+}
+
+
 @font-face {
     font-family: "Cina Geo";
     src: url("../fonts/CinaGEOTest-SemiBold-BF64015899cbc35.otf")
@@ -31,6 +38,10 @@
     format("opentype");
     font-weight: 700;
     font-style: normal;
+}
+
+.sticky-top {
+    background-color: var(--white-color);
 }
 
 .hover-underline-animation {
@@ -105,4 +116,27 @@ body {
 
 .first-section {
     height: 90vh; /* entire viewport */
+}
+
+/* =========================================
+   FIX: NAVBAR OVERLAP (Tablet Size)
+   ========================================= */
+
+@media (min-width: 768px) and (max-width: 1100px) {
+    /* 1. Reduce body padding to give the navbar more space */
+    body {
+        padding: 0 20px !important;
+    }
+
+    /* 2. Slightly shrink the Logo text */
+    .pala, .wonder {
+        font-size: 24px; /* Adjusts logo size to prevent collision */
+    }
+
+    /* 3. Shrink and tighten the Nav Links */
+    .nav-link {
+        font-size: 15px; /* Slightly smaller text */
+        padding-left: 8px !important;  /* Reduce gap between links */
+        padding-right: 8px !important;
+    }
 }

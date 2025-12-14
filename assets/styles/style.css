@@ -1,24 +1,45 @@
 :root {
-	--black-color: #1a1e18;
-	--white-color: #ffffff;
-	--gray-color: #f4f4f4;
+    --black-color: #1a1e18;
+    --white-color: #ffffff;
+    --gray-color: #f4f4f4;
+}
+
+@font-face {
+    font-family: "Cina Geo";
+    src: url("assets/fonts/CinaGEOTest-ExtraLight-BF6401589a08ee8.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cina Geo";
+    src: url("assets/fonts/CinaGEOTest-Regular-BF640158993b49e.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cina Geo";
+    src: url("assets/fonts/CinaGEOTest-SemiBold-BF64015899cbc35.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cina Geo";
+    src: url("assets/fonts/CinaGEOTest-Bold-BF64015899f3908.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
 }
 
 @keyframes blink {
-	0%,
-	50%,
-	100% {
-		opacity: 1;
-	}
-	25%,
-	75% {
-		opacity: 0;
-	}
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
 }
 
 @keyframes marquee-left {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); } /* Assumes content is duplicated */
+    to { transform: translateX(-50%); }
 }
 
 @keyframes marquee-right {
@@ -26,836 +47,313 @@
     to { transform: translateX(0); }
 }
 
-@font-face {
-	font-family: "Cina Geo";
-	src: url("../fonts/CinaGEOTest-ExtraLight-BF6401589a08ee8.otf")
-		format("opentype");
-	font-weight: 300;
-	font-style: normal;
-}
-
-/* Regular */
-@font-face {
-	font-family: "Cina Geo";
-	src: url("../fonts/CinaGEOTest-Regular-BF640158993b49e.otf")
-		format("opentype");
-	font-weight: 400;
-	font-style: normal;
-}
-
-/* Semi-Bold */
-@font-face {
-	font-family: "Cina Geo";
-	src: url("../fonts/CinaGEOTest-SemiBold-BF64015899cbc35.otf")
-		format("opentype");
-	font-weight: 600;
-	font-style: normal;
-}
-
-/* Bold */
-@font-face {
-	font-family: "Cina Geo";
-	src: url("../fonts/CinaGEOTest-Bold-BF64015899f3908.otf")
-		format("opentype");
-	font-weight: 700;
-	font-style: normal;
-}
-
-/* =========================================
-   GLOBAL MOBILE SPACING FIX
-   (Applies to phones max-width 576px)
-   ========================================= */
-/* =========================================
-   FINAL MOBILE OVERRIDES (Place at very bottom of CSS)
-   ========================================= */
-
-/* 1. Override the Body Padding */
-
-    /* Optional: Ensure containers don't add double padding */
-
-/* ... existing code above ... */
-
-/* =========================================
-   MOBILE & TABLET OPTIMIZATIONS
-   (These rules only apply to screens smaller than 992px)
-   ========================================= */
-
-@media (max-width: 992px) {
-    /* TABLETS: Make the text container wider so it doesn't wrap too much */
-    .carousel-fixed-text {
-        width: 85%;
-    }
-
-    .crsl-h1 {
-        font-size: 65px;
-        line-height: 1.1;
-    }
-}
-
-/* ▼▼▼▼▼ THIS IS THE SECTION WE ARE CHANGING ▼▼▼▼▼ */
-@media (max-width: 768px) {
-    /* PHONES: Adjust height and text width */
-
-    .first-section {
-        /* --- CHANGE START --- */
-        /* Formerly 85vh. Reduced to 60vh for a better mobile look. */
-        height: 60vh !important;
-        /* Formerly 500px. Reduced min-height to match the new shorter height. */
-        min-height: 400px;
-        /* --- CHANGE END --- */
-    }
-
-    .carousel-fixed-text {
-        width: 95%;
-    }
-    /* ▲▲▲▲▲ END OF CHANGES ▲▲▲▲▲ */
-
-
-    .crsl-h1 {
-        font-size: 42px;
-        line-height: 1.2;
-        margin-bottom: 15px;
-    }
-
-    .crsl-p {
-        font-size: 16px;
-        margin-bottom: 25px;
-    }
-
-    .crsl-btn {
-        width: 150px;
-        font-size: 14px;
-        padding: 10px 0;
-    }
-}
-
-/* ... rest of your CSS remains the same ... */
-
-/* =========================================
-   RESPONSIVE ADJUSTMENTS (Mobile & Tablet)
-   These rules only trigger on smaller screens
-   ========================================= */
-
-/* Tablet and below (max-width: 992px) */
-@media (max-width: 992px) {
-    body {
-        /* Reduce the heavy side padding from desktop */
-        padding: 0 30px !important;
-    }
-
-    .tours-h1 {
-        font-size: 42px; /* Slightly smaller heading */
-    }
-}
-
-/* Mobile Devices (max-width: 768px) */
-@media (max-width: 768px) {
-    body {
-        /* Standard mobile padding to prevent squishing */
-        padding: 0 20px !important;
-    }
-
-    /* Adjust the main section Title */
-    .tours-h1 {
-        font-size: 36px !important;
-        margin-top: 20px;
-    }
-
-    .tours-p {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-
-    /* Fix the fixed width on the paragraph below icons */
-    .tours-h5-p {
-        width: 100%; /* Override the fixed 200px width */
-        padding: 0 5px; /* Prevent text touching edges */
-        font-size: 13px;
-        line-height: 1.4;
-    }
-
-    /* Adjust the icons size if they feel too big on phone */
-    .circle-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-
-    .tours-h5 {
-        font-size: 16px;
-        margin-top: 5px;
-    }
-}
-
-/* ... existing CSS ... */
-
-    /* ... your existing mobile styles ... */
-
-    /* -------------------------------------------
-       MOBILE HORIZONTAL SCROLL FOR TOURS
-    ------------------------------------------- */
-
-    /* 1. Turn the Grid Row into a Scrollable Flex Container */
-.mobile-scroll-row {
-    display: flex !important;
-    flex-wrap: nowrap !important; /* Prevents wrapping to next line */
-    overflow-x: auto; /* Enables horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Forces cards to snap into place */
-    gap: 15px; /* Space between cards */
-    padding-bottom: 20px; /* Space for shadow so it doesn't get cut off */
-
-    /* Remove default bootstrap margin issues on mobile */
-    margin-right: -20px !important;
-    margin-left: -20px !important;
-    padding-left: 20px; /* visual padding start */
-    padding-right: 20px; /* visual padding end */
-
-    /* Smooth scrolling for iOS */
-    -webkit-overflow-scrolling: touch;
-
-    /* Hide Scrollbar */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE 10+ */
-}
-
-/* Hide Chrome/Safari/Webkit scrollbar */
-.mobile-scroll-row::-webkit-scrollbar {
-    display: none;
-}
-
-/* 2. Fix the Columns (Cards) width */
-.mobile-scroll-row .col {
-    flex: 0 0 85%; /* Make card take 85% of screen width */
-    max-width: 85%;
-    scroll-snap-align: center; /* Card snaps to center of screen */
-}
-
-
 body {
-	background-color: var(--white-color);
-	padding: 0 50px !important;
-	margin: 0;
+    background-color: var(--white-color);
+    padding: 0 50px !important;
+    margin: 0;
 }
 
-.first-section {
-	height: 90vh; /* entire viewport */
+.section {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }
 
-.carousel-inner img {
-	object-fit: cover; /* makes the image fill carousel without stretching */
-}
-
-.carousel-fixed-text {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 60%;
-	transform: translate(-50%, -50%);
-	color: white;
-	font-weight: bold;
-	text-align: center;
-	z-index: 3;
-}
-
-.crsl-h1 {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 700;
-	font-size: 100px;
-}
-
-.crsl-p {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 300;
-	font-size: 17px;
-}
-
-.crsl-btn {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
-	font-size: 15px;
-	margin-top: 20px;
-	width: 140px;
-	background-color: white;
-	color: black;
-	border: 1px solid transparent;
-	transition: all 0.3s ease;
-	position: relative;
-	z-index: 2;
-}
-
-.crsl-btn:hover {
-	background-color: rgba(255, 255, 255, 0.15);
-	color: #fff;
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	backdrop-filter: blur(10px);
-	box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
-	transform: scale(1.05);
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-	/* LG and below */
-	.crsl-h1 {
-		font-size: 60px;
-	}
-	.crsl-p {
-		font-size: 16px;
-	}
-	.crsl-btn {
-		font-size: 14px;
-		width: 120px;
-	}
-}
-
-@media (max-width: 768px) {
-	/* MD and below, tablets */
-	.crsl-h1 {
-		font-size: 45px;
-	}
-	.crsl-p {
-		font-size: 14px;
-	}
-	.crsl-btn {
-		font-size: 13px;
-		width: 110px;
-	}
-}
-
-@media (max-width: 576px) {
-	/* SM and below, phones */
-	.crsl-h1 {
-		font-size: 30px;
-	}
-	.crsl-p {
-		font-size: 12px;
-	}
-	.crsl-btn {
-		font-size: 12px;
-		width: 100px;
-	}
-}
-
-.carousel-item .overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.4); /* adjust opacity to your liking */
-	z-index: 1;
-}
-
-.carousel-fade .carousel-item {
-	transition: opacity 0.6s ease;
-}
-
-.icon-wrapper {
-	position: relative;
-	display: inline-block;
-	width: 1.25em;
-	text-align: center;
-}
-
-.icon-wrapper .hover-icon {
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: none;
-}
-
-.hover-icon {
-	display: none !important;
-}
-
-.icon-toggle:hover .normal-icon {
-	display: none;
-}
-
-.icon-toggle:hover .hover-icon {
-	display: inline-block !important;
-}
-
-.dropdown .bi:hover {
-	color: gray !important;
-	background-color: transparent !important;
-}
-
-.tours-h1 {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
-	font-size: 50px;
-	margin-bottom: 15px;
-}
-
-.tours-p {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 300;
-	font-size: 16px;
-	color: #393939 !important;
+.section-mrgn {
+    min-width: 600px;
 }
 
 .d-flex .flex-fill h5 {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+}
+
+.first-section {
+    height: 90vh;
+}
+
+.carousel-inner img {
+    object-fit: cover;
+}
+
+.carousel-fixed-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    z-index: 3;
+}
+
+.carousel-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.carousel-fade .carousel-item {
+    transition: opacity 0.6s ease;
+}
+
+.crsl-h1 {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+}
+
+.crsl-p {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.crsl-btn {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 20px;
+    width: 140px;
+    background-color: white;
+    color: black;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.crsl-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.icon-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 1.25em;
+    text-align: center;
+}
+
+.icon-wrapper .hover-icon,
+.hover-icon {
+    display: none !important;
+}
+
+.icon-wrapper .hover-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.icon-toggle:hover .normal-icon {
+    display: none;
+}
+
+.icon-toggle:hover .hover-icon {
+    display: inline-block !important;
+}
+
+.dropdown .bi:hover {
+    color: gray !important;
+    background-color: transparent !important;
+}
+
+.circle-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--gray-color);
+    color: #000;
+    font-size: 1.25rem;
+    line-height: 0;
+    margin-bottom: 10px;
+}
+
+.tours-h1 {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.tours-p {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #393939 !important;
 }
 
 .tours-h5 {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
-	font-size: 18px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .tours-h5-p {
     font-family: "Cina Geo", sans-serif;
     font-weight: 300;
     font-size: 14px;
-
-    /* CHANGE HERE */
-    width: 100%;       /* Allow it to shrink if the screen is small */
-    max-width: 200px;  /* Keep it neat on big screens */
-
+    width: 100%;
+    max-width: 200px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
-.circle-icon {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	width: 45px; /* circle size */
-	height: 45px; /* circle size */
-	border-radius: 50%; /* makes it a circle */
-	background-color: var(--gray-color); /* light gray */
-	color: #000; /* icon color */
-	font-size: 1.25rem; /* adjust icon size */
-	line-height: 0; /* remove extra spacing */
-	margin-bottom: 10px;
-}
-
 .see-all-btn {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-	text-align: center;
-	width: 10%;
-	display: block;
-	margin: 0 auto;
-	color: black;
-	border-color: black;
-}
-
-.see-all-btn:hover {
-	background-color: black !important;
-	color: white !important;
-}
-
-.hidden-card {
-	display: none;
-}
-
-.card-img-top {
-	display: block;
-	width: 100%; /* always fill the card’s width */
-	height: 250px; /* fixed height for all images */
-	object-fit: cover; /* crop edges to fill frame evenly */
-	object-position: center; /* center the cropped area */
-	border-top-left-radius: 0.5rem; /* optional rounding */
-	border-top-right-radius: 0.5rem;
-}
-
-.card-round {
-	display: inline-block;
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
-	font-size: 13px;
-	letter-spacing: 1px;
-	background-color: var(--gray-color);
-	color: #6c757d;
-	padding: 2px 6px;
-	margin-bottom: 5px;
-}
-
-.rating-badge {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	padding: 4px 12px;
-	display: flex;
-	align-items: center;
-	gap: 4px;
-
-	/* 🎨 Glassy gray background */
-	background: rgba(120, 120, 120, 0.25); /* light gray with transparency */
-	backdrop-filter: blur(10px) saturate(180%);
-	-webkit-backdrop-filter: blur(10px) saturate(180%);
-
-	color: #fff;
-	font-weight: 600;
-	font-size: 14px;
-	border-radius: 9999px; /* full pill */
-	border: 1px solid rgba(255, 255, 255, 0.2); /* subtle glass border */
-}
-
-.card-tour, .card-blog, .card-know {
-	position: relative;
-	min-height: 460px; /* keeps cards equal height */
-	border-radius: 0.5rem;
-	overflow: hidden;
-	transition: all 0.4s ease; /* smooth transitions */
-}
-
-
-
-.card-body {
-	padding-bottom: 10px; /* adds space so price doesn’t overlap text */
-}
-.card-price:hover {
-	transform: translateY(-8px); /* lift up slightly */
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* soft shadow glow */
-}
-
-/* Image brightness on hover */
-.img-price:hover {
-	filter: brightness(1.1);
-	transform: scale(1.05); /* slight zoom */
-	transition: all 0.5s ease;
-}
-
-/* Reset smooth transitions when not hovered */
-.img-price {
-	transition: all 0.5s ease;
-}
-
-.price-container {
-	position: absolute;
-	bottom: 15px;
-	left: 20px;
-	display: flex;
-	align-items: center;
-	gap: 6px;
-}
-
-.price-text {
-	margin: 0;
-	font-size: 0.9rem;
-	color: #6c757d;
-	font-weight: 400;
-	text-transform: uppercase;
-}
-
-.price-tag {
-	margin: 0;
-	font-size: 1.5rem;
-	font-weight: 600;
-	color: #000;
-}
-
-.card-img {
-	height: 70vh; /* 70% of viewport height */
-	object-fit: cover;
-}
-
-.section-mrgn {
-	min-width: 600px;
-}
-
-.footer-wrapper {
-	background-color: #efefef;
-}
-
-.border-top-dark {
-	border-top: 1px solid #d3d3d3; /* dark gray */
-}
-
-.section {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-}
-
-.travel-img-card {
-	border: none;
-	position: relative;
-	overflow: hidden;
-}
-
-.travel-img-card::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.2);
-	z-index: 1;
-}
-
-.travel-h5 {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
-	font-size: 70px;
-	margin-top: 30px;
-	margin-left: 50px;
-	position: relative;
-	z-index: 3;
-	color: white;
-}
-
-.travel-p {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 300;
-	font-size: 14px;
-	margin-top: 20px;
-	margin-left: 55px;
-	position: relative;
-	z-index: 3;
-	color: white;
-}
-
-.travel-h5::after,
-.travel-p::after {
-	content: none;
-}
-
-.card-end-img {
-	border: none;
-	height: 30vh; /* 70% of viewport height */
-	object-fit: cover;
-}
-
-.card-end-img::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.2);
-	z-index: 1;
-}
-
-.card-end-text {
-	display: flex; /* enable flexbox */
-	flex-direction: column; /* stack h5 and p vertically */
-	justify-content: center; /* vertical centering */
-	align-items: center; /* horizontal centering */
-	text-align: center; /* center text */
-	padding: 0; /* remove default padding */
-}
-
-.card-end-h5 {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
-	font-size: 70px;
-	width: 80%;
-	color: var(--white-color);
-	z-index: 3;
-}
-
-.rd-al-artcls {
     font-family: "Cina Geo", sans-serif;
     font-weight: 400;
     font-size: 16px;
     text-align: center;
-
-    /* FIX: Stop using 20%. Use auto width with padding */
-    display: inline-block; /* Allows button to hug the text */
-    width: auto;           /* Let width be determined by text length */
-    min-width: 200px;      /* Ensures it doesn't get too small */
-    padding: 10px 30px;    /* Adds breathing room inside the button */
-
-    margin: 0;
+    width: 10%;
+    display: block;
+    margin: 0 auto;
     color: black;
     border-color: black;
-    white-space: nowrap;   /* Prevents text from breaking into 2 lines */
-    transition: all 0.3s ease;
 }
 
-.rd-al-artcls:hover {
+.see-all-btn:hover {
     background-color: black !important;
     color: white !important;
-    transform: translateY(-2px); /* Optional: Adds a tiny lift effect */
 }
 
-.blogs-h5 {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
-	font-size: 50px;
-	margin-bottom: 15px;
+.card-tour, .card-blog, .card-know {
+    position: relative;
+    min-height: 460px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: all 0.4s ease;
 }
 
-.blogs-p {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 300;
-	font-size: 16px;
-	text-align: justify;
-	color: #393939 !important;
+.card-img-top {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.hidden-card {
+    display: none;
 }
 
 .card-title {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 400;
-	font-size: 22px;
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
 }
 
 .card-text {
-	font-family: "Cina Geo", sans-serif;
-	font-weight: 300;
-	font-size: 16px;
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
 }
 
+.card-round {
+    display: inline-block;
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background-color: var(--gray-color);
+    color: #6c757d;
+    padding: 2px 6px;
+    margin-bottom: 5px;
+}
 
-@media (max-width: 768px) {
-    .newsletter-input-wrapper {
-        margin-left: 0;
-        margin-top: 20px;
-    }
+.rating-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(120, 120, 120, 0.25);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-body {
+    padding-bottom: 10px;
+}
+
+.price-container {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.price-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.price-tag {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.card-price:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.img-price {
+    transition: all 0.5s ease;
+}
+
+.img-price:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
 }
 
 .card-btn {
-	position: absolute;
-	bottom: 20px; /* distance from bottom */
-	right: 20px; /* distance from right */
-	width: 50px;
-	height: 50px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
 }
 
 .card-btn:hover {
-	background-color: black !important;
-	color: white !important;
-}
-
-.blog-btn {
-    /* 1. Reset Position: Ensures it sits BELOW content, never overlaps */
-    position: relative !important;
-    bottom: auto !important;
-    right: auto !important;
-
-    /* 2. Internal Alignment (Fixes the icon/text mismatch) */
-    display: inline-flex !important; /* aligned side-by-side */
-    align-items: center !important;  /* vertical center */
-    justify-content: center;         /* horizontal center */
-    gap: 8px;                        /* space between text and arrow */
-    margin-right: 20px !important;
-
-    /* 3. Styling */
-    white-space: nowrap;
-    border: 1px solid black;
-    color: black;
-    transition: all 0.3s ease;
-    text-decoration: none; /* removes underline */
-}
-
-/* Fix for the Icon specifically to ensure it doesn't jump up/down */
-.blog-btn i {
-    margin: 0 !important; /* Reset existing margins */
-    line-height: 1 !important; /* Removes extra height causing offset */
-    display: flex; /* Helps it behave for alignment */
-}
-
-.blog-btn:hover {
     background-color: black !important;
     color: white !important;
 }
 
-.marquee-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden; /* Hides the scrollbar, keeps content inside */
-    padding: 10px 0;
-
-    /* Optional: Fades the left and right edges for a premium look */
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-
-.marquee-track-first,
-.marquee-track-second {
-    display: flex;
-    gap: 30px; /* Space between cards */
-    width: max-content; /* Forces content to be as wide as needed */
-}
-
-/* 2. ANIMATIONS */
-.marquee-track-first {
-    animation: marquee-left 45s linear infinite;
-}
-
-.marquee-track-second {
-    animation: marquee-right 45s linear infinite;
-}
-
-.marquee-first {
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100% !important; /* Forces it to fill the card height */
-}
-
-.card-item {
-    flex: 0 0 auto; /* Prevents cards from shrinking */
-    width: 400px;   /* Fixed width for Desktop */
-}
-
-.testimonial-card {
-    border: none;
-    border-radius: 15px;
-    background: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft shadow */
-    height: 100%; /* Ensures all cards in a row are same height */
-    padding: 15px;
-}
-
-.testimonial-p {
-    font-family: "Cina Geo", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    max-width: 700px;
-    margin: 0 auto;
-    color: #555;
-}
-
-.profile-section {
-    /* Stop it from floating over text */
-    position: relative !important;
-    bottom: auto !important;
-    left: auto !important;
-
-    /* "Auto" margin pushes it to the bottom of the flex container,
-       but keeps it strictly BELOW the text. */
-    margin-top: auto !important;
-
-    /* Add breathing room between text and profile */
-    padding-top: 15px !important;
-}
-
-.profile-img {
-	width: 40px;
-	height: 40px;
-	object-fit: cover;
-	border-radius: 50%;
-}
-
-.profile-text {
-	padding-left: 15px;
-}
-
-.profile-role {
-	font-size: 0.75rem;
-}
-
-/* Optional: smooth shadow */
-.testimonial-card {
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* --- SCROLL CONTAINER --- */
 .tour-carousel-wrapper {
     width: 100%;
-    /* Add padding left/right to align with container-fluid on large screens */
     padding: 0 0;
 }
 
@@ -863,41 +361,32 @@ body {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 30px; /* Space between cards */
-    padding: 20px 50px 40px 50px; /* Top, Right, Bottom, Left */
-
-    /* Hide scrollbar */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE */
+    gap: 30px;
+    padding: 20px 50px 40px 50px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-/* Hide webkit scrollbar */
 .tours-scroll-container::-webkit-scrollbar {
     display: none;
 }
 
-/* --- FIXED CARD SIZING --- */
 .tour-card-fixed {
-    /* Prevent Flex shrinking/growing */
     flex: 0 0 auto;
-
-    /* FIXED WIDTH for all screens */
     width: 340px;
 }
 
 .card-tour {
-    /* FIXED HEIGHT for all screens */
     height: 540px !important;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Subtle shadow */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .card-tour .card-body {
-    flex: 1; /* Pushes content to fill space */
+    flex: 1;
 }
 
-/* --- NAVIGATION BUTTONS (Left/Right) --- */
 .scroll-arrow {
     position: absolute;
     top: 50%;
@@ -924,497 +413,517 @@ body {
     border-color: var(--black-color);
 }
 
-.scroll-left {
-    left: 20px; /* Position from left edge */
+.scroll-left { left: 20px; }
+.scroll-right { right: 20px; }
+
+.mobile-scroll-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding-bottom: 20px;
+    margin-right: -20px !important;
+    margin-left: -20px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-.scroll-right {
-    right: 20px; /* Position from right edge */
+.mobile-scroll-row::-webkit-scrollbar {
+    display: none;
 }
 
-/* --- RESPONSIVENESS --- */
+.mobile-scroll-row .col {
+    flex: 0 0 85%;
+    max-width: 85%;
+    scroll-snap-align: center;
+}
 
-/* For Tablets and Small Laptops */
+.travel-img-card {
+    border: none;
+    position: relative;
+    overflow: hidden;
+    height: 50vh
+}
+
+.travel-img-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.travel-h5 {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+    font-size: 70px;
+    margin-top: 30px;
+    margin-left: 50px;
+    position: relative;
+    z-index: 3;
+    color: white;
+}
+
+.travel-p {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 55px;
+    position: relative;
+    z-index: 3;
+    color: white;
+}
+
+.travel-h5::after, .travel-p::after {
+    content: none;
+}
+
+.card-end-img {
+    border: none;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.card-end-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.card-end-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
+.card-end-h5 {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+    font-size: 70px;
+    width: 80%;
+    color: var(--white-color);
+    z-index: 3;
+}
+
+.card-know {
+    background-color: transparent !important;
+    border: none !important;
+    height: 400px;
+    overflow: hidden;
+}
+
+.card-know .card-img {
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blogs-h5 {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.blogs-p {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: justify;
+    color: #393939 !important;
+}
+
+.rd-al-artcls {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    min-width: 200px;
+    padding: 10px 30px;
+    margin: 0;
+    color: black;
+    border-color: black;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.rd-al-artcls:hover {
+    background-color: black !important;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.blog-btn {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center;
+    gap: 8px;
+    margin-right: 20px !important;
+    white-space: nowrap;
+    border: 1px solid black;
+    color: black;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.blog-btn i {
+    margin: 0 !important;
+    line-height: 1 !important;
+    display: flex;
+}
+
+.blog-btn:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+@media (min-width: 768px) {
+    .blog-btn {
+        display: flex !important;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: 30px;
+        padding: 8px 30px;
+    }
+}
+
+.marquee-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track-first, .marquee-track-second {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+}
+
+.marquee-track-first {
+    animation: marquee-left 45s linear infinite;
+}
+
+.marquee-track-second {
+    animation: marquee-right 45s linear infinite;
+}
+
+.marquee-first {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+.card-item {
+    flex: 0 0 auto;
+    width: 400px;
+}
+
+.testimonial-card {
+    border: none;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    padding: 15px;
+}
+
+.testimonial-p {
+    font-family: "Cina Geo", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+.profile-section {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin-top: auto !important;
+    padding-top: 15px !important;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-text {
+    padding-left: 15px;
+}
+
+.profile-role {
+    font-size: 0.75rem;
+}
+
+.footer-wrapper {
+    background-color: #efefef;
+}
+
+.border-top-dark {
+    border-top: 1px solid #d3d3d3;
+}
+
+@media (max-width: 1200px) {
+    .card-item {
+        width: 340px;
+    }
+    .testimonial-p {
+        width: 80%;
+    }
+}
+
 @media (max-width: 992px) {
-    .tour-card-fixed {
-        width: 300px; /* Slightly narrower cards */
+    body {
+        padding: 0 30px !important;
     }
-    .card-tour {
-        height: 500px !important;
+
+    .crsl-h1 { font-size: 60px; }
+    .crsl-p { font-size: 16px; }
+    .crsl-btn { font-size: 14px; width: 120px; }
+    .carousel-fixed-text { width: 85%; }
+    .crsl-h1 { line-height: 1.1; }
+
+    .tours-h1 { font-size: 42px; }
+    .tour-card-fixed { width: 300px; }
+    .card-tour { height: 500px !important; }
+
+    #blogs {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+    .blogs-h5 { font-size: 42px; }
+    .rd-al-artcls { width: 40%; }
+
+    .card-end-h5 {
+        font-size: 50px;
+        width: 90%;
+    }
+    .card-end-img {
+        height: 35vh !important;
+    }
+    .card-know .card-img {
+        height: 350px !important;
     }
 }
 
-/* For Mobile Phones */
 @media (max-width: 768px) {
-    .tours-scroll-container {
-        padding: 10px 20px 30px 20px; /* Less side padding on phone */
-        gap: 15px;
-        scroll-snap-type: x mandatory; /* Snap effect on touch */
+    body {
+        padding: 0 20px !important;
     }
 
+    .first-section {
+        height: 60vh !important;
+        min-height: 400px;
+    }
+    .carousel-fixed-text { width: 95%; }
+    .crsl-h1 {
+        font-size: 45px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    .crsl-p { font-size: 16px; margin-bottom: 25px; }
+    .crsl-btn {
+        width: 150px;
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    .tours-h1 {
+        font-size: 36px !important;
+        margin-top: 20px;
+    }
+    .tours-p { font-size: 14px; padding: 0 10px; }
+    .tours-h5-p {
+        width: 100%;
+        padding: 0 5px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    .tours-h5 { font-size: 16px; margin-top: 5px; }
+    .circle-icon { width: 40px; height: 40px; font-size: 1rem; }
+
+    .tours-scroll-container {
+        padding: 10px 20px 30px 20px;
+        gap: 15px;
+        scroll-snap-type: x mandatory;
+    }
     .tour-card-fixed {
-        width: 85vw; /* Card takes 85% of screen width */
+        width: 85vw;
         max-width: 320px;
         scroll-snap-align: center;
     }
+    .container-fluid.px-5 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
 
-    /* Buttons are hidden via d-none d-md-flex class in HTML,
-       so no extra CSS needed here */
+    #blogs { padding: 40px 20px !important; }
+    .blogs-h5 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+    .blogs-p {
+        font-size: 15px;
+        text-align: left;
+        line-height: 1.6;
+    }
+    .rd-al-artcls {
+        width: 200px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .blog-btn {
+        display: inline-flex !important;
+        width: fit-content !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+        align-self: center !important;
+        padding: 12px 40px !important;
+    }
+    .blog-btn i { margin-left: 8px !important; }
+
+    .newsletter-input-wrapper {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .marquee-first {
+        width: 100% !important;
+        height: auto !important;
+        white-space: normal !important;
+        flex: 1 1 auto !important;
+    }
+    .card-item { width: 280px; }
+    .testimonial-card { padding: 10px; }
+    .testimonial-p { width: 100%; font-size: 14px; padding: 0 15px; }
+    .profile-role { font-size: 11px; }
+    .profile-img { width: 35px; height: 35px; }
+    .marquee-track-first, .marquee-track-second { animation-duration: 30s; }
+
+    .card-end-img {
+        height: auto !important;
+        min-height: 400px;
+    }
+    .card-end-h5 {
+        font-size: 32px;
+        width: 100%;
+        line-height: 1.2;
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+    .card-end-text .crsl-btn {
+        width: 160px;
+        font-size: 14px;
+        padding: 12px 0;
+    }
+    .card-end-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-know {
+        height: 400px !important;
+        background: transparent !important;
+        border: none !important;
+    }
+    .card-know .card-img {
+        min-height: 100% !important;
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important;
+    }
 }
 
-/* =========================================
-   MOBILE CARD SIZING (Small Screens)
-   (Applies to phones max-width 576px)
-   ========================================= */
-/* =========================================
-   COMPACT MOBILE CARD SIZING
-   (Applies to phones max-width 576px)
-   ========================================= */
-/* =========================================
-   COMPACT MOBILE CARD SIZING (FIXED)
-   (Applies to phones max-width 576px)
-   ========================================= */
-/* =========================================
-   COMPACT MOBILE CARD SIZING (UPDATED)
-   (Applies to phones max-width 576px)
-   ========================================= */
 @media (max-width: 576px) {
-    /* 1. NARROWER WIDTH */
-    .tour-card-fixed {
-        width: 250px !important; /* Slightly wider to accommodate bigger text */
-    }
+    .crsl-h1 { font-size: 30px; }
+    .crsl-p { font-size: 12px; }
+    .crsl-btn { font-size: 12px; width: 100px; }
 
-    /* 2. SHORTER HEIGHT */
+    .tour-card-fixed { width: 250px !important; }
     .card-tour {
-        min-height: 0 !important; /* Reset global min-height */
-        height: 360px !important; /* Slightly taller for text breathing room */
+        min-height: 0 !important;
+        height: 360px !important;
     }
-
-    /* 3. IMAGE HEIGHT */
-    .card-tour .card-img-top {
-        height: 140px;
-    }
-
-    /* 4. TEXT ADJUSTMENTS (Bigger & Clearer) */
-    .card-tour .card-body {
-        padding: 14px; /* More padding for cleaner look */
-    }
-
-    .card-tour .card-round {
-        font-size: 11px; /* Increased from 10px */
-        margin-bottom: 4px;
-    }
-
+    .card-tour .card-img-top { height: 140px; }
+    .card-tour .card-body { padding: 14px; }
+    .card-tour .card-round { font-size: 11px; margin-bottom: 4px; }
     .card-tour .card-title {
-        font-size: 18px; /* Increased from 16px */
+        font-size: 18px;
         margin-bottom: 6px;
         line-height: 1.2;
     }
-
     .card-tour .card-text {
-        font-size: 13.5px; /* Increased from 12px */
+        font-size: 13.5px;
         line-height: 1.35;
-        color: #555; /* Slightly darker for readability */
-
-        /* Cut off text after 3 lines */
+        color: #555;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
         margin-bottom: 0;
     }
+    .price-container { bottom: 12px; left: 14px; }
+    .card-tour .price-text { font-size: 0.75rem; }
+    .card-tour .price-tag { font-size: 1.15rem; }
 
-    /* 5. PRICE SECTION */
-    .price-container {
-        bottom: 12px;
-        left: 14px;
-    }
-
-    .card-tour .price-text {
-        font-size: 0.75rem;
-    }
-
-    .card-tour .price-tag {
-        font-size: 1.15rem;
-    }
-
-    /* 6. BUTTON CENTERING FIX */
     .card-tour .card-btn {
         width: 38px;
         height: 38px;
         bottom: 12px;
         right: 12px;
-
-        /* THE FIX: Use Flexbox to center the icon perfectly */
         display: flex !important;
         justify-content: center;
         align-items: center;
-        padding: 0 !important; /* Remove any default Bootstrap padding */
+        padding: 0 !important;
     }
-
     .card-tour .card-btn i {
         font-size: 1.1rem !important;
-        /* Remove line-height or margin that might offset it */
         line-height: 0;
         margin: 0;
     }
+
+    #blogs { padding-left: 15px !important; padding-right: 15px !important; }
+    .blogs-h5 { font-size: 32px; }
+    .blogs-p { font-size: 14px; }
+    .rd-al-artcls { width: 100%; padding: 12px 0; }
 }
 
-/* =========================================
-   BLOGS SECTION RESPONSIVENESS
-   Targeting ID #blogs and classes inside
-   ========================================= */
-
-/* --- TABLETS (Between 768px and 992px) --- */
-@media (max-width: 992px) {
-    /* Reduce the heavy padding (px-5) from the container */
-    #blogs {
-        padding-left: 30px !important;
-        padding-right: 30px !important;
-    }
-
-    /* Slightly smaller title */
-    .blogs-h5 {
-        font-size: 42px;
-    }
-
-    /* Make button wider on tablet (was 20%) */
-    .rd-al-artcls {
-        width: 40%;
-    }
-}
-
-/* --- MOBILE LANDSCAPE / LARGE PHONES (Below 768px) --- */
-@media (max-width: 768px) {
-    #blogs {
-        padding: 40px 20px !important;
-    }
-
-    .blogs-h5 {
-        font-size: 36px; /* Much smaller for mobile readability */
-        margin-bottom: 10px;
-        line-height: 1.2;
-    }
-
-    .blogs-p {
-        font-size: 15px;
-        text-align: left; /* 'Justify' looks bad on narrow mobile columns */
-        line-height: 1.6;
-    }
-
-    /* Make the button fit the content or fixed width */
-    .rd-al-artcls {
-        width: 200px; /* Fixed pixel width for touch target */
-        margin-top: 10px;
-        margin-bottom: 30px; /* Add space below button */
-    }
-}
-
-/* --- SMALL PHONES (Below 576px) --- */
-@media (max-width: 576px) {
-    /* Minimal padding to maximize screen real estate */
-    #blogs {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-    }
-
-    .blogs-h5 {
-        font-size: 32px;
-    }
-
-    .blogs-p {
-        font-size: 14px;
-    }
-
-    /* Make button full width for easy thumb tapping */
-    .rd-al-artcls {
-        width: 100%;
-        padding: 12px 0; /* Taller button for easier clicking */
-    }
-}
-
-
-@media (min-width: 768px) {
-    .blog-btn {
-        /* Makes the button act like a block so we can push it right */
-        display: flex !important;
-        width: fit-content; /* wraps around the text tightly */
-
-        /* Pushes button to the Right */
-        margin-left: auto;
-        margin-right: 0;
-
-        /* Spacing from the content above */
-        margin-top: 30px;
-
-        padding: 8px 30px;
-    }
-}
-
-/* --- MOBILE PHONE (SM, XS) --- */
-/* Centered, Top spacing added */
-/* --- MOBILE PHONE (SM, XS) --- */
-/* Centered, Top spacing added */
-/* --- MOBILE PHONE (SM, XS) --- */
-/* Centered Horizontally AND Vertically */
-@media (max-width: 767px) {
-    .blog-btn {
-        /* 1. Layout & Sizing */
-        /* Use inline-flex to keep text & icon aligned and fit width to content */
-        display: inline-flex !important;
-        width: fit-content !important;
-
-        /* 2. HORIZONTAL CENTERING */
-        /* Use auto margins to center horizontally.
-           Must use !important to override global margin-right. */
-        margin-left: auto !important;
-        margin-right: auto !important;
-
-        /* 3. VERTICAL CENTERING (Visual) */
-        /* Apply equal margins above and below to center it vertically into space */
-        margin-top: 30px !important;
-        margin-bottom: 30px !important;
-
-        /* 4. Alignment Safety Net */
-        /* Ensures it aligns center in the flex parent (the card) */
-        align-self: center !important;
-
-        /* 5. Larger touch target for mobile */
-        padding: 12px 40px !important;
-    }
-
-    /* Ensure space between text and icon */
-    .blog-btn i {
-        margin-left: 8px !important;
-    }
-}
-
-
-@media (max-width: 1200px) {
-    .card-item {
-        width: 340px; /* Slightly narrower cards */
-    }
-
-    .testimonial-p {
-        width: 80%; /* Allow header text to take more space */
-    }
-}
-
-/* --- MOBILE (Below 768px) --- */
-@media (max-width: 768px) {
-
-    .marquee-first {
-        /* 1. Override the fixed 24rem width */
-        width: 100% !important;
-
-        /* 2. Remove fixed height so text doesn't get cut off vertically */
-        height: auto !important;
-
-        /* 3. Ensure text wraps normally */
-        white-space: normal !important;
-
-        /* 4. Reset Flex shrinking */
-        flex: 1 1 auto !important;
-    }
-
-    /* Optional: If text touches the edges too much */
-    .card-text {
-        padding-right: 5px;
-    }
-    /* 1. Adjust the Header */
-    .tours-h1 {
-        font-size: 36px; /* Smaller Title */
-    }
-
-    .testimonial-p {
-        width: 100%; /* Full width text */
-        font-size: 14px;
-        padding: 0 15px;
-    }
-
-    /* 2. Resize the Marquee Cards */
-    .card-item {
-        width: 280px; /* Much narrower to fit phone screens nicely */
-    }
-
-    .testimonial-card {
-        padding: 10px; /* Less internal padding */
-    }
-
-    /* 3. Adjust Text inside Cards */
-    .card-text {
-        font-size: 14px; /* Smaller quote text */
-        line-height: 1.4;
-    }
-
-    .profile-role {
-        font-size: 11px; /* Smaller role text */
-    }
-
-    .profile-img {
-        width: 35px; /* Slightly smaller avatar */
-        height: 35px;
-    }
-
-    /* 4. Speed up animation slightly on mobile (optional, feels more dynamic) */
-    .marquee-track-first {
-        animation-duration: 30s;
-    }
-    .marquee-track-second {
-        animation-duration: 30s;
-    }
-}
-
-/* --- SMALL MOBILE (Below 400px) --- */
 @media (max-width: 400px) {
-    .card-item {
-        width: 250px; /* Very narrow for small devices like iPhone SE */
-    }
+    .card-item { width: 250px; }
 }
-
-/* =========================================
-   "LET'S GET TO KNOW PALAWAN" RESPONSIVENESS
-   ========================================= */
-
-/* --- TABLETS (Between 768px and 992px) --- */
-@media (max-width: 992px) {
-    .card-end-h5 {
-        font-size: 50px; /* Reduce from 70px */
-        width: 90%;      /* Allow text to use more width */
-    }
-
-    .card-end-img {
-        /* Increase height slightly so text has room to breathe */
-        height: 35vh !important;
-    }
-}
-
-/* --- MOBILE PHONES (Below 768px) --- */
-@media (max-width: 768px) {
-    /* 1. Container Height */
-    .card-end-img {
-        /* Switch from viewport height (vh) to a fixed min-height
-           so content doesn't get cut off on small screens */
-        height: auto !important;
-        min-height: 400px;
-    }
-
-    /* 2. Text Sizing */
-    .card-end-h5 {
-        font-size: 32px;     /* Much smaller for readability */
-        width: 100%;         /* Use full width */
-        line-height: 1.2;    /* Tighten line spacing */
-        margin-bottom: 25px; /* Space between text and button */
-        padding: 0 10px;     /* Prevent text touching screen edges */
-    }
-
-    /* 3. Button Adjustments */
-    .card-end-text .crsl-btn {
-        width: 160px;        /* Fixed comfortable width */
-        font-size: 14px;
-        padding: 12px 0;
-    }
-
-    /* 4. Ensure Overlay centers correctly */
-    .card-end-text {
-        /* Re-enforce centering just in case */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-@media (max-width: 992px) {
-    .card-know .card-img {
-        height: 350px !important;
-    }
-}
-
-/* 3. MOBILE PHONES */
-/* Small enough to see content, tall enough to cover text */
-@media (max-width: 768px) {
-    .card-know .card-img {
-        height: 300px !important;
-    }
-
-    /* Ensure the container matches the image height */
-    .card-know {
-        height: auto !important;
-        min-height: 300px !important;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Target the specific container holding the card */
-    .container-fluid.px-5 {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-    }
-}
-
-@media (max-width: 768px) {
-
-    /* 1. Target the Card Container */
-    .card-know {
-        /* Allow height to grow if text is long */
-        height: auto !important;
-        min-height: 300px !important;
-
-        /* THE FIX: Remove the gray background color entirely */
-        background-color: transparent !important;
-        border: none !important;
-    }
-
-    /* 2. Target the Image inside */
-    .card-know .card-img {
-        /* Force image to be at least as tall as the container */
-        min-height: 100% !important;
-        height: auto !important;
-
-        /* Ensure it covers the area without distorting */
-        object-fit: cover;
-    }
-}
-
-/* --- MOBILE PHONES --- */
-@media (max-width: 768px) {
-    .card-know {
-        /* 1. Set a fixed height that fits all text */
-        height: 400px !important;
-
-        /* 2. Remove background color */
-        background: transparent !important;
-        border: none !important;
-    }
-
-    .card-know .card-img {
-        /* 3. Force image to fill the 450px height completely */
-        height: 100% !important;
-        width: 100% !important;
-        object-fit: cover !important; /* Ensure no stretching */
-    }
-}
-
-.card-know {
-    /* Remove the color causing the gray bar */
-    background-color: transparent !important;
-    border: none !important;
-
-    /* Default Desktop Height */
-    height: 400px;
-    overflow: hidden; /* Clips corners */
-}
-
-/* Force image to fill the container completely */
-.card-know .card-img {
-    height: 100% !important; /* Fill parent height */
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* =========================================
-   FIX GRAY BAR ON MOBILE
-   ========================================= */
-

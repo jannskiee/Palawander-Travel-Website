@@ -165,3 +165,94 @@
     }
 }
 
+/* CONTAINER: Ensure flex works perfectly on all screens */
+.newsletter-input-wrapper {
+    display: flex;
+    width: 100%;
+    background: white;
+    border-radius: 50px; /* Fully rounded */
+    padding: 4px; /* Space between input and button */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.newsletter-input-wrapper:focus-within {
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1); /* Subtle focus ring */
+}
+
+/* INPUT: Takes remaining space */
+.newsletter-input-wrapper input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    background: transparent;
+    font-size: 1rem;
+    min-width: 0; /* Prevents overflow on mobile */
+}
+
+/* BUTTON: The Star of the Show */
+.newsletter-btn {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap; /* Prevents text wrapping */
+    min-width: 130px; /* Locks width so it doesn't jitter */
+
+    /* SMOOTH ANIMATION ENGINE */
+    transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.2s ease;
+
+    /* Fixes blurring during animation */
+    transform: translateZ(0);
+}
+
+.newsletter-btn:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* STATE: SUCCESS (Green) */
+.newsletter-btn.is-success {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+    color: white !important;
+    cursor: default;
+}
+
+/* STATE: ERROR (Red + Shake) */
+/* ... keep your other .newsletter-btn styles ... */
+
+/* STATE: ERROR (Red + Intense Shake) */
+.newsletter-btn.is-error {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: white !important;
+    /* Changed duration to 0.5s for a longer shake sequence */
+    animation: intenseShake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* NEW: The "More Shakey" Animation */
+@keyframes intenseShake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-12px) skewX(-5deg); } /* Tilt slightly */
+    40% { transform: translateX(10px) skewX(4deg); }
+    60% { transform: translateX(-6px) skewX(-2deg); }
+    80% { transform: translateX(4px) skewX(1deg); }
+    100% { transform: translateX(0); }
+}
+
+/* MOBILE FIX: On very small screens, ensure layout holds */
+@media (max-width: 400px) {
+    .newsletter-btn {
+        padding: 10px 15px; /* Smaller padding */
+        min-width: auto;
+    }
+}
+

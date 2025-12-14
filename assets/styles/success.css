@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Inter', sans-serif;
+    color: #212529;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.ticket-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+}
+
+.ticket-header {
+    padding: 40px 40px 20px 40px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ticket-body { padding: 30px 40px; }
+
+.ticket-footer {
+    background-color: #fcfcfc;
+    padding: 20px 40px;
+    border-top: 2px dashed #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.label-text {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #adb5bd;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.value-text { font-weight: 400; margin-bottom: 0; }
+.value-large { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; }
+
+.status-badge {
+    background-color: #e6fcf5;
+    color: #0ca678;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ref-code {
+    font-family: monospace;
+    background: #f8f9fa;
+    padding: 6px 12px;
+    border-radius: 8px;
+    color: #495057;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* --- VECTOR QR CONTAINER --- */
+.qr-vector-container {
+    width: 85px;
+    height: 85px;
+    /* No blurring or pixelation possible with SVG */
+}
+
+@media print {
+    body { background: white; padding: 0; }
+    .no-print { display: none !important; }
+    .ticket-card { box-shadow: none; border: 1px solid #ddd; width: 100%; max-width: 100%; }
+}

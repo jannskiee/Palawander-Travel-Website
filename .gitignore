@@ -3,5 +3,5 @@
 *.iml
 out
 gen
-.env
-test.php
+config/secrets.php
+uploads/ids

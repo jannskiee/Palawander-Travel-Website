@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "Cina Geo";
+    src: url("assets/fonts/CinaGEOTest-Regular-BF640158993b49e.otf")
+    format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cina Geo";
+    src: url("assets/fonts/CinaGEOTest-SemiBold-BF64015899cbc35.otf")
+    format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cina Geo";
+    src: url("assets/fonts/CinaGEOTest-Bold-BF64015899f3908.otf")
+    format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+.hero-section {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.timeline-step {
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 40px;
+}
+
+.timeline-step::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    height: 100%;
+    width: 2px;
+    background-color: #e9ecef;
+}
+
+.timeline-step:last-child::before {
+    display: none;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: black; /* Primary Color */
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px black;
+}
+
+.sticky-sidebar {
+    position: sticky;
+    top: 100px; /* Adjust based on your navbar height */
+}
+
+.list-check li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.list-check i {
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.tour-price {
+    color: black;
+}
+
+.book-now {
+    color: white;
+    border-color: black;
+    background-color: black;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.book-now:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+    background-color: black !important;
+    color: white !important;
+}
+
+.tour-time {
+    color: #6c757d;
+}
+
+#map {
+    width: 100%;
+    height: 400px; /* Mandatory: Mapbox needs a defined height */
+    border-radius: 12px; /* Rounded corners to match your UI aesthetics */
+    overflow: hidden; /* Ensures the map canvas stays within the rounded corners */
+}
+
+/* Optional: Adjust height for mobile screens */
+@media (max-width: 768px) {
+    #map {
+        height: 300px;
+    }
+}

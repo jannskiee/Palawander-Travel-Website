@@ -1,0 +1,130 @@
+/* assets/styles/booking.css */
+
+/* --- BASE STYLES --- */
+body {
+    background-color: white;
+    color: #212529;
+}
+
+/* --- INPUTS & FLOATING LABELS --- */
+.form-floating > .form-control,
+.form-floating > .form-select {
+    height: 3.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: none;
+    color: #495057;
+    background-color: #fff;
+}
+
+.form-floating > label {
+    color: #868e96;
+    padding-left: 0.75rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Helper Text Indentation */
+.form-text-indented {
+    padding-left: 0.75rem;
+}
+
+/* FILE INPUT CUSTOMIZATION */
+.form-control[type="file"] {
+    padding: 0.8rem;
+    height: auto;
+}
+
+/* --- CARD STYLES --- */
+.card {
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.border-dashed {
+    border-bottom: 1px dashed #dee2e6;
+}
+
+/* --- PAYMENT RADIO BUTTONS --- */
+.btn-check:checked + .btn-outline-custom {
+    border-color: #212529;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    color: #212529;
+}
+
+.btn-outline-custom {
+    border: 1px solid #dee2e6;
+    color: #6c757d;
+    background-color: white;
+    font-weight: 500;
+}
+
+.btn-outline-custom:hover {
+    border-color: #adb5bd;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* --- SUMMARY SPECIFIC STYLES --- */
+.summary-box {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 12px;
+    height: 100%;
+}
+
+.summary-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #adb5bd;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.summary-total-box {
+    background-color: #212529;
+    color: white;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+/* --- WEATHER WIDGET STYLES (Cleaned & Updated) --- */
+.weather-card {
+    position: relative;
+    border: 1px solid #e9ecef !important; /* Updated color to match your inline style */
+    background-color: #fff;
+    height: 4rem;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+/* New class for the text "FORECAST" inside the flex container */
+.weather-label-text {
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+}
+
+.weather-icon {
+    width: 42px;  /* Updated size to match your inline style */
+    height: 42px; /* Updated size to match your inline style */
+    transition: all 0.3s ease;
+}
+
+.weather-content-area {
+    height: 24px;
+}
+
+.weather-text {
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+}
+
+.weather-placeholder-bar {
+    height: 12px;
+}

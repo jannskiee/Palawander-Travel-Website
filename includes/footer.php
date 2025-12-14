@@ -1,24 +1,23 @@
 <div class="footer-wrapper rounded-4 my-3">
+    <div class="newsletter-card rounded-top-4">
+        <div class="row align-items-center mx-2 newsletter-text-main">
+            <div class="col-md-6 newsletter-text pe-md-5">
+                <h3 class="newsletter-title">Subscribe To Our Newsletter</h3>
+                <p class="newsletter-desc mb-0 newsletter-sub">
+                    Sign up today for exclusive travel tips, upcoming tour announcements, and hidden gems to inspire your next adventure.
+                </p>
+            </div>
 
-	<div class="newsletter-card rounded-top-4">
-		<div class="row align-items-center mx-2 newsletter-text-main">
-			<div class="col-md-6 newsletter-text pe-md-5	">
-				<h3 class="newsletter-title">Subscribe To Our Newsletter</h3>
-				<p class="newsletter-desc mb-0 newsletter-sub">
-					Sign up today for exclusive travel tips, upcoming tour announcements, and hidden gems to inspire your next adventure.
-				</p>
-			</div>
-
-			<div class="col-md-6 ps-md-5">
-				<form action="#">
-					<div class="newsletter-input-wrapper">
-						<input type="email" placeholder="Enter email address" required>
-						<button type="submit" class="newsletter-btn">Get Listed</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+            <div class="col-md-6 ps-md-5">
+                <div class="newsletter-input-wrapper">
+                    <input type="email" id="newsletterEmail" placeholder="Enter email address" required>
+                    <button type="button" onclick="sendNewsletterEmail()" class="newsletter-btn">
+                        Get Listed
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 	<footer class="pt-5">
 		<div class="container-fluid">
 			<div class="row align-items-start mx-4">
@@ -94,4 +93,6 @@
 		</div>
 	</footer>
 </div>
+
+<script src="/webdev/assets/scripts/newsletter.js"></script>
 

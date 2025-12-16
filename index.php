@@ -162,8 +162,29 @@
 
     <div class="container-fluid px-3 px-md-5 mb-4">
         <div class="row">
-            <div class="col-12">
-                <h1 class="tours-h1">Choose your tour</h1>
+            <div class="col-12 d-flex justify-content-between align-items-center">
+
+                <h1 class="tours-h1 mb-0">Choose your tour</h1>
+
+                <div class="dropdown">
+                    <button class="btn btn-outline-dark rounded-pill px-3 py-2 d-flex align-items-center gap-2 border-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-filter-left" viewBox="0 0 16 16">
+                            <path d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                        <span class="d-none d-sm-inline fw-semibold">Sort</span>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 rounded-4 mt-2 p-2">
+                        <li><h6 class="dropdown-header text-uppercase small fw-bold text-muted">Price</h6></li>
+                        <li><a class="dropdown-item rounded-2" href="javascript:void(0)" onclick="sortTours('price', 'asc')"><i class="bi bi-arrow-up-short me-2"></i>Lowest to Highest</a></li>
+                        <li><a class="dropdown-item rounded-2" href="javascript:void(0)" onclick="sortTours('price', 'desc')"><i class="bi bi-arrow-down-short me-2"></i>Highest to Lowest</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header text-uppercase small fw-bold text-muted">Name</h6></li>
+                        <li><a class="dropdown-item rounded-2" href="javascript:void(0)" onclick="sortTours('name', 'asc')"><i class="bi bi-sort-alpha-down me-2"></i>Name (A-Z)</a></li>
+                        <li><a class="dropdown-item rounded-2" href="javascript:void(0)" onclick="sortTours('name', 'desc')"><i class="bi bi-sort-alpha-up-alt me-2"></i>Name (Z-A)</a></li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>
@@ -1297,6 +1318,7 @@
 
 <?php include 'includes/footer.php'; ?>
 
+<script src="assets/scripts/sort.js"></script>
 <script src="assets/scripts/currency-converter.js"></script>
 <script src="assets/scripts/left-and-right-btn.js"></script>
 <script src="assets/scripts/typewriter-animation.js"></script>

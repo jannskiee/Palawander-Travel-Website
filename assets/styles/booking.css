@@ -128,3 +128,68 @@ body {
 .weather-placeholder-bar {
     height: 12px;
 }
+
+/* The Main Card Container */
+.manage-booking-card {
+    background-color: #212529; /* Dark background */
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    border: none;
+}
+
+/* The Background Overlay (Dark Layer) */
+.manage-booking-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #212529;
+    z-index: 0;
+}
+
+/* The Content Area (Ensures text sits above background) */
+.manage-booking-content {
+    position: relative;
+    z-index: 1;
+    padding: 3rem !important; /* Equivalent to p-5 */
+}
+
+/* The White Form Container */
+.manage-booking-form {
+    background-color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 50rem; /* rounded-pill */
+}
+
+/* The Search Icon */
+.manage-booking-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem; /* Adjusts how far left the icon is */
+    transform: translateY(-50%);
+    color: #6c757d; /* Text muted color */
+    z-index: 10;
+}
+
+/* The Input Field */
+.manage-booking-input {
+    box-shadow: none !important; /* Removes blue glow on click */
+    padding-left: 3rem !important; /* Space for the icon (ps-5) */
+    padding-top: 1rem !important;  /* py-3 */
+    padding-bottom: 1rem !important; /* py-3 */
+    border-radius: 50rem;
+}
+
+.manage-booking-input:focus {
+    box-shadow: none !important;
+}
+
+/* The Check Now Button */
+.manage-booking-btn {
+    border-radius: 50rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 700;
+}

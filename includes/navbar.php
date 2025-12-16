@@ -70,12 +70,26 @@
                             <button class="btn" data-bs-toggle="dropdown" type="button">
                                 <i class="bi bi-list fs-3"></i>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end d-md-none">
-                                <li><a class="dropdown-item" href="/webdev/index.php#home">Home</a></li>
-                                <li><a class="dropdown-item" href="/webdev/index.php#tour">Our Tours</a></li>
-                                <li><a class="dropdown-item" href="/webdev/index.php#blogs">Blogs</a></li>
-                                <li><a class="dropdown-item" href="/webdev/bookings-page.php">Bookings</a></li>
-                                <li><a class="dropdown-item" href="/webdev/faqs-page.php">FAQs</a></li>
+
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-4 p-2">
+
+                                <div class="d-md-none">
+                                    <li><a class="dropdown-item rounded-2" href="/webdev/index.php#home">Home</a></li>
+                                    <li><a class="dropdown-item rounded-2" href="/webdev/index.php#tour">Our Tours</a></li>
+                                    <li><a class="dropdown-item rounded-2" href="/webdev/index.php#blogs">Blogs</a></li>
+                                    <li><a class="dropdown-item rounded-2" href="/webdev/bookings-page.php">Bookings</a></li>
+                                    <li><a class="dropdown-item rounded-2" href="/webdev/faqs-page.php">FAQs</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                </div>
+
+                                <li>
+                                    <h6 class="dropdown-header text-uppercase small fw-bold text-muted">Management</h6>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item rounded-2 fw-bold text-danger" href="/webdev/admin/login.php">
+                                        <i class="bi bi-shield-lock me-2"></i>Admin
+                                    </a>
+                                </li>
                             </ul>
                         </div>
 
